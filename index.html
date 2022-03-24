@@ -120,7 +120,39 @@
             <div>
         </section>
         <section>
-            
+            <div>
+                <h2>Get in touch with us</h2>
+                <hr>
+            </div>
+            <form action="Server URL" method="POST">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="Full name" id="full-name" placeholder="John Smith">
+                <label for="department">Choose a department:</label>
+                <select name="department" id="department">
+                    <option value="Area" disabled selected>-Area-</option>
+                    <option value="Rosario">Rosario</option>
+                    <option value="Caseros">Caseros</option>
+                </select>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="johnsmith@mail.com">
+                <fieldset>
+                    <legend>Priority</legend>
+                    <input type="radio" id="low" name="priority" value="low">
+                    <label for="low">Low</label>
+                    <input type="radio" id="medium" name="priority" value="medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="high" name="priority" value="high">
+                    <label for="high">High</label>
+                </fieldset>
+                <label for="message">Ask about our system</label>
+                <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                <input type="checkbox" name="robot">
+                <label>I am not a robot</label>
+                <input type="checkbox" name="send-copy" id="send-copy">
+                <label for="send-copy">Send me a copy</label>
+                <button>Submit</button>
+                <input type="reset" value="Reset">
+            </form>
         </section>
         <section>
             
