@@ -5,11 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./CSS/landing-styles.css">
         <title>Trackgenix</title>
     </head>
     <body>
         <header>
-            <img src="./assets/icons/trackgenix-logo.png" alt="company's logo">
+            <img src="./assets/icons/trackgenix-logo.png" alt="company's logo" class="icon">
             <h1>Trackgenix SA</h1>
         </header>
         <main>
@@ -22,10 +23,9 @@
                         totam commodi omnis minus animi voluptatem blanditiis fugit fuga, rem nemo eaque quas autem vel quis? Totam!
                     </p>
                     <a href="#">Learn more</a>
-                    <img src="" alt="">
                 </div>
                 <div>
-                    <img src="/Semana-01/assets/images/manage-teams.jpg" alt="">
+                    <img src="./assets/images/manage-teams.jpg" alt="">
                 </div>
             </section>
             <section>
@@ -33,28 +33,28 @@
                 <div>
                     <div>
                         <div>
-                            <img src="" alt="">
+                            <img src="./assets/icons/calendar-logo.png" alt="" class="icon">
                         </div>
                         <h3>Time Tracking</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </div>
                     <div>
                         <div>
-                            <img src="/assets/icons/bar-graph-logo.png" alt="">
+                            <img src="./assets/icons/bar-graph-logo.png" alt="" class="icon">
                         </div>
                         <h3>Reports</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </div>
                     <div>
                         <div>
-                            <img src="/assets/icons/multiple-roles.png" alt="">
+                            <img src="./assets/icons/multiple-roles.png" alt="" class="icon">
                         </div>
                         <h3>Multiple Roles</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </div>
                     <div>
                         <div>
-                            <img src="/assets/icons/resource-management.png" alt="">
+                            <img src="./assets/icons/resource-management.png" alt="" class="icon">
                         </div>
                         <h3>Resource Management</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
@@ -66,7 +66,7 @@
                 <div>
                     <div>
                         <div>
-                            <img src="/assets/images/productivity-booster.jpg" alt="">
+                            <img src="./assets/images/productivity-booster.jpg" alt="">
                         </div>
                         <h3>Productivity Booster</h3>
                         <p>
@@ -90,7 +90,7 @@
                     </div>
                     <div>
                         <div>
-                            <img src="/assets/images/leadership.jpg" alt="">
+                            <img src="./assets/images/leadership.jpg" alt="">
                         </div>
                         <h3>Leadership and team management</h3>
                         <p>
@@ -102,7 +102,7 @@
                     </div>
                     <div>
                         <div>
-                            <img src="/assets/images/decision-making.jpg" alt="">
+                            <img src="./assets/images/decision-making.jpg" alt="">
                         </div>
                         <h3>Decision Making</h3>
                         <p>
@@ -124,8 +124,8 @@
                             <label for="department">Choose a department:</label>
                             <select name="department" id="department">
                                 <option value="Area" disabled selected>-Area-</option>
-                                <option value="Rosario">Rosario</option>
-                                <option value="Caseros">Caseros</option>
+                                <option value="Sales">Sales</option>
+                                <option value="Technical service">Technical service</option>
                             </select>
                         </div>
                         <div>
@@ -142,16 +142,18 @@
                             </fieldset>
                         </div>
                     </div>
-                    <p>Ask about our systems</p>
-                    <textarea name="message" placeholder="Enter your message"></textarea>
-                    <p></p>
-                    <input type="checkbox" name="robot">
-                    <label>I am not a robot</label>
-                    <input type="checkbox" name="send-copy" id="send-copy">
-                    <label for="send-copy">Send me a copy</label>
-                    <p></p>
-                    <button>Submit</button>
-                    <input type="reset" value="Reset">
+                    <label for="message">Ask about our systems</label>
+                    <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                    <div>
+                        <input type="checkbox" name="robot">
+                        <label>I am not a robot</label>
+                        <input type="checkbox" name="send-copy" id="send-copy">
+                        <label for="send-copy">Send me a copy</label>
+                    </div>
+                    <div>
+                        <button>Submit</button>
+                        <input type="reset" value="Reset">
+                    </div>
                 </form>
             </section>
             <section>
@@ -251,11 +253,11 @@
         </nav>
         <footer>
             <address>
-                <a href="https://www.linkedin.com"><img src="/assets/icons/linkedin-logo.png" alt=""></a>
-                <a href="https://www.twitter.com"><img src="/assets/icons/twitter-logo.png" alt=""></a>
-                <a href="https://www.facebook.com"><img src="/assets/icons/fb-logo.png" alt=""></a>
-                <a href="https://www.instagram.com"><img src="/assets/icons/instagram-logo.png" alt=""></a>
-                <a href="https://www.github.com"><img src="/assets/icons/github-logo.png" alt=""></a>
+                <a href="https://www.linkedin.com"><img src="/assets/icons/linkedin-logo.png" alt="" class="icon"></a>
+                <a href="https://www.twitter.com"><img src="/assets/icons/twitter-logo.png" alt="" class="icon"></a>
+                <a href="https://www.facebook.com"><img src="/assets/icons/fb-logo.png" alt="" class="icon"></a>
+                <a href="https://www.instagram.com"><img src="/assets/icons/instagram-logo.png" alt="" class="icon"></a>
+                <a href="https://www.github.com"><img src="/assets/icons/github-logo.png" alt="" class="icon"></a>
             </address>
             <div>
                 <p>Rosario, Argentina</p>
