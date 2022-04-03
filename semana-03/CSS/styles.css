@@ -28,16 +28,25 @@
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
 body{
     position: relative;
     height: max-content;
     font-family: 'Roboto', sans-serif;
     color: var(--grayish-navy);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+span{
+    display: inline-block;
+}
+
+ol{
+    list-style: decimal;
+    list-style-position: inside;
 }
 
 header{
@@ -61,12 +70,29 @@ main{
     margin-right: 78px;
 }
 
+section{
+    position: relative;
+    margin-bottom: 57px;
+    padding-bottom: 95px;
+}
+
 footer{
     margin-left: 252px;
     margin-right: 78px;
 }
 
+nav{
+    position: relative;
+    padding-bottom: 95px;
+    font-size: var(--subheader);
+    text-align: center;
+}
+
 /*=== CLASSES ===*/
+
+.inline-block{
+    display: inline-block;
+}
 
 .rr-logo{
     margin-top: 13px;
@@ -115,7 +141,7 @@ footer{
     top: 25px;
     left: 0;
     border-radius: 4px;
-    height: 3.5px;
+    height: 3px;
     width: 47px;
     background-color: var(--grayish-navy);
 }
@@ -132,6 +158,7 @@ footer{
     position: absolute;
     top: 32px;
     left: 0;
+    border-radius: 3px;
     height: 1px;
     width: 100%;
     background-color: var(--grayish-navy-40);
@@ -157,5 +184,60 @@ footer{
     position: relative;
     vertical-align: top;
     margin-right: 1px;
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--grayish-navy-40);
+}
+
+nav::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-grayish-green);
+}
+
+.nav-block{
+    text-align: left;
+}
+
+.a{
+    position: absolute;
+    left: 113px;
+}
+
+.c{
+    position: absolute;
+    right: 113px;
+}
+
+.copyright{
+    position: absolute;
+    right: 0;
+    padding-top: 16px;
+}
+
+.copyright p{
+    margin-bottom: 23px;
+    text-align: right;
+}
+
+footer div{
+    position: relative;
+}
+
+.sm-link{
+    margin-right: 38px;
+    padding-top: 32px;
 }
 

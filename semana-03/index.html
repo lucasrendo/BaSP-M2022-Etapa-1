@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--STYLES-->
-        <link rel="stylesheet" href="/CSS/reset.css">
+        <link rel="stylesheet" href="./CSS/reset.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="./CSS/styles.css">
         <!--END-->
         <title>Trackgenix</title>
@@ -205,7 +206,7 @@
         </main>
         <footer>
             <nav>
-                <span>
+                <span class="nav-block a">
                     <p>Products</p>
                     <ol>
                         <li>
@@ -222,7 +223,7 @@
                         </li>
                     </ol>
                 </span>
-                <span>
+                <span class="nav-block b">
                     <p>Company</p>
                     <ol>
                         <li>
@@ -239,7 +240,7 @@
                         </li>
                     </ol>
                 </span>
-                <span>
+                <span class="nav-block c">
                     <p>Support</p>
                     <ol>
                         <li>
@@ -257,16 +258,18 @@
                     </ol>
                 </span>
             </nav>
-            <address>
-                <a href="https://www.linkedin.com"><img src="/assets/icons/linkedin-logo.png" alt="" width="20" height="20"></a>
-                <a href="https://www.twitter.com"><img src="/assets/icons/twitter-logo.png" alt="" width="20" height="17"></a>
-                <a href="https://www.facebook.com"><img src="/assets/icons/fb-logo.png" alt="" width="12" height="20"></a>
-                <a href="https://www.instagram.com"><img src="/assets/icons/instagram-logo.png" alt="" width="20" height="20"></a>
-                <a href="https://www.github.com"><img src="/assets/icons/github-logo.png" alt="" width="20" height="20"></a>
-            </address>
             <div>
-                <p>Rosario, Argentina</p>
-                <p>Copyright <i class='bx bx-copyright'></i> 2022 Radium Rocket. All rights reserved</p>
+                <address class="inline-block">
+                    <a href="https://www.linkedin.com"><img src="./assets/icons/linkedin-logo.png" alt="" class="sm-link"></a>
+                    <a href="https://www.twitter.com"><img src="./assets/icons/twitter-logo.png" alt="" class="sm-link"></a>
+                    <a href="https://www.facebook.com"><img src="./assets/icons/fb-logo.png" alt="" class="sm-link"></a>
+                    <a href="https://www.instagram.com"><img src="./assets/icons/instagram-logo.png" alt="" class="sm-link"></a>
+                    <a href="https://www.github.com"><img src="./assets/icons/github-logo.png" alt="" class="sm-link"></a>
+                </address>
+                <div class="inline-block copyright">
+                    <p>Rosario, Argentina</p>
+                    <p>Copyright <i class='bx bx-copyright'></i> 2022 Radium Rocket. All rights reserved</p>
+                </div>
             </div>
         </footer>
     </body>
