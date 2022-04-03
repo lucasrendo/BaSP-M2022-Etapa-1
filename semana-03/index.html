@@ -4,94 +4,92 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+        <!--STYLES-->
+        <link rel="stylesheet" href="/CSS/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/CSS/styles.css">
+        <!--END-->
         <title>Trackgenix</title>
     </head>
     <body>
         <header>
-            <img src="./assets/icons/trackgenix-logo.png" alt="company's logo" class="icon" height="150" width="160">
-            <h1>Trackgenix SA</h1>
+            <img src="./assets/icons/trackgenix-logo.png" alt="company's logo" class="rr-logo">
+            <h1 class="title">Trackgenix SA</h1>
         </header>
         <aside>
-            <img src="./assets/icons/sidebar-button.png" alt="">
-            <div>
-                <h2>Menu</h2>
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="#">Log in</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact Us</a>
-                        <div>
-                            <img src="./assets/icons/mail-icon.png" alt="">
-                            <p>contact@trackgenix.com</p>
+            <div class="sidebar">
+                <img src="./assets/icons/sidebar-button.png" alt="" class="side-btn">
+                <div>
+                    <p class="side-title">Menu</p>
+                    <ul>
+                        <li class="side-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="side-link">
+                            <a href="#">Sign Up</a>
+                        </li>
+                        <li class="side-link">
+                            <a href="#">Log in</a>
+                        </li>
+                        <li class="side-link2">
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="address-block">
+                        <img src="./assets/icons/mail-icon.png" alt="" class="address-icon">
+                        <p class="address">contact@trackgenix.com</p>
+                    </div>
+                    <div class="address-block">
+                        <img src="./assets/icons/phone-icon.png" alt="" class="address-icon">
+                        <p class="address">(000) 000-0000</p>
+                    </div>
+                    <div class="address-block">
+                        <img src="./assets/icons/home-icon.png" alt="" class="address-icon">
+                        <div class="address">
+                            <p>1234 Somewhere road</p>
+                            <p>#8254</p>
+                            <p>Nashville, TN</p>
+                            <p>00000-0000</p>
                         </div>
-                        <div>
-                            <img src="./assets/icons/phone-icon.png" alt="">
-                            <p>(000) 000-0000</p>
-                        </div>
-                        <div>
-                            <img src="./assets/icons/home-icon.png" alt="">
-                            <div>
-                                <p>1234 Somewhere road</p>
-                                <p>#8254</p>
-                                <p>Nashville, TN</p>
-                                <p>00000-0000</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </aside>
         <main>
             <section>
                 <div>
                     <h2>Manage your hours and teams with ease</h2>
-                    <h3>Use Trackgenix to track time, make decisions and upgrade your productivity</h3>
+                    <p>Use Trackgenix to track time, make decisions and upgrade your productivity</p>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto excepturi exercitationem repellat magni 
                         totam commodi omnis minus animi voluptatem blanditiis fugit fuga, rem nemo eaque quas autem vel quis? Totam!
                     </p>
                     <a href="#">Learn more</a>
                 </div>
-                <div>
-                    <img src="./assets/images/manage-teams.jpg" alt="" height="600" width="900">
-                </div>
+                <img src="./assets/images/manage-teams.jpg" alt="" height="600" width="900">
             </section>
             <section>
                 <h2>Functionalities</h2>
                 <div>
                     <article>
-                        <div>
-                            <img src="./assets/icons/calendar-icon.png" alt="" width="100" height="100">
-                        </div>
+                        <img src="./assets/icons/calendar-icon.png" alt="" width="100" height="100">
                         <h3>Time Tracking</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/icons/graph-icon.png" alt="" height="100" width="100">
-                        </div>
+                        <img src="./assets/icons/graph-icon.png" alt="" height="100" width="100">
                         <h3>Reports</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/icons/multiple-roles.png" alt="" height="100" width="100">
-                        </div>
+                        <img src="./assets/icons/multiple-roles.png" alt="" height="100" width="100">
                         <h3>Multiple Roles</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/icons/resource-management.png" alt="" height="100" width="100">
-                        </div>
+                        <img src="./assets/icons/resource-management.png" alt="" height="100" width="100">
                         <h3>Resource Management</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, consequuntur provident</p>
                     </article>
@@ -101,9 +99,7 @@
                 <h2>Why does this mean an improvement in your work</h2>
                 <div>
                     <article>
-                        <div>
-                            <img src="./assets/images/productivity-booster.jpg" alt="" width="900" height="600">
-                        </div>
+                        <img src="./assets/images/productivity-booster.jpg" alt="" width="900" height="600">
                         <h3>Productivity Booster</h3>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo voluptatibus eius autem
@@ -113,9 +109,7 @@
                         <a href="#">More</a>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/images/traceability.jpg" alt="" width="829" height="600" >
-                        </div>
+                        <img src="./assets/images/traceability.jpg" alt="" width="829" height="600" >
                         <h3>Work Traceability</h3>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo voluptatibus eius autem
@@ -125,9 +119,7 @@
                         <a href="#">More</a>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/images/leadership.jpg" alt="" width="900" height="600">
-                        </div>
+                        <img src="./assets/images/leadership.jpg" alt="" width="900" height="600">
                         <h3>Leadership and team management</h3>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo voluptatibus eius autem
@@ -137,9 +129,7 @@
                         <a href="#">More</a>
                     </article>
                     <article>
-                        <div>
-                            <img src="./assets/images/decision-making.jpg" alt="" width="900" height="600">
-                        </div>
+                        <img src="./assets/images/decision-making.jpg" alt="" width="900" height="600">
                         <h3>Decision Making</h3>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo voluptatibus eius autem
