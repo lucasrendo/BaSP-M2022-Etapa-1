@@ -214,7 +214,7 @@ section::after{
 }
 
 .section-1 img{
-    display: inline-block;
+    border-radius: 10px;
     width: 47%;
 }
 
@@ -259,6 +259,70 @@ section::after{
     background-color: var(--light-grayish-green);
 }
 
+.functionality-item{
+    display: inline-block;
+    margin-bottom: 79px;
+    width: 47%;
+    max-width: 523px;
+}
+
+.functionality-item img{
+    width: 34%;
+}
+
+.functionality-item div{
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+}
+
+.functionality-item h3{
+    display: inline-block;
+    margin-top: 31px;
+    margin-bottom: 17px;
+    margin-left: 23px;
+    font-size: var(--title);
+    font-weight: var(--title-font);
+}
+
+.functionality-item p{
+    display: inline-block;
+    margin-left: 23px;
+    font-size: var(--subheader);
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 47%;
+    height: 621px;
+    background-color: var(--grayish-navy-10);
+    vertical-align: top;
+}
+
+.card img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card h3{
+    font-size: var(--title);
+    font-weight: var(--title-font);
+    margin: 20px 0px;
+}
+
+.card p{
+    font-size: var(--subheader);
+}
+
+.card a{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
 nav::after{
     content: "";
     position: absolute;
@@ -301,36 +365,4 @@ footer div{
 .sm-link{
     margin-right: 38px;
     padding-top: 32px;
-}
-
-.functionality-item{
-    display: inline-block;
-    margin-bottom: 79px;
-    width: 47%;
-    max-width: 523px;
-}
-
-.functionality-item img{
-    width: 34%;
-}
-
-.functionality-item div{
-    display: inline-block;
-    width: 65%;
-    vertical-align: top;
-}
-
-.functionality-item h3{
-    display: inline-block;
-    margin-top: 31px;
-    margin-bottom: 17px;
-    margin-left: 23px;
-    font-size: var(--title);
-    font-weight: var(--title-font);
-}
-
-.functionality-item p{
-    display: inline-block;
-    margin-left: 23px;
-    font-size: var(--subheader);
 }
