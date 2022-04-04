@@ -91,11 +91,12 @@ nav{
 
 /*=== CLASSES ===*/
 
-.inline-block{
-    display: inline-block;
+.spacing{
+    margin-right: 5.5%;
 }
 
 .more-btn{
+    display: inline-block;
     padding: 14px 30px;
     border: 1px solid var(--grayish-navy);
     border-radius: 5px;
@@ -112,6 +113,7 @@ nav{
 }
 
 .title{
+    display: inline-block;
     margin-top: 21px;
     margin-bottom: 9px;
     margin-left: 26.9px;
@@ -207,14 +209,13 @@ section::after{
 .section-1 div{
     display: inline-block;
     position: relative;
-    margin-right: 9%;
-    width: 45%;
+    width: 47%;
     vertical-align: top;
 }
 
 .section-1 img{
     display: inline-block;
-    width: 45%;
+    width: 47%;
 }
 
 .main-title{
@@ -302,3 +303,34 @@ footer div{
     padding-top: 32px;
 }
 
+.functionality-item{
+    display: inline-block;
+    margin-bottom: 79px;
+    width: 47%;
+    max-width: 523px;
+}
+
+.functionality-item img{
+    width: 34%;
+}
+
+.functionality-item div{
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+}
+
+.functionality-item h3{
+    display: inline-block;
+    margin-top: 31px;
+    margin-bottom: 17px;
+    margin-left: 23px;
+    font-size: var(--title);
+    font-weight: var(--title-font);
+}
+
+.functionality-item p{
+    display: inline-block;
+    margin-left: 23px;
+    font-size: var(--subheader);
+}
