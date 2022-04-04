@@ -160,39 +160,57 @@
                     <h2 class="section-title">Get in touch with us</h2>
                 </div>
                 <form action="Server URL" method="POST">
-                    <div>
-                        <div>
-                            <label for="full-name">Full Name</label>
-                            <input id="full-name" type="text" name="Full name" placeholder="John Smith">
-                            <label for="department">Choose a department:</label>
-                            <select id="department" name="department">
-                                <option value="Area" disabled selected>-Area-</option>
-                                <option value="Sales">Sales</option>
-                                <option value="Technical service">Technical service</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="email">Email Address</label>
-                            <input id="email" type="email" name="email" placeholder="johnsmith@mail.com">
-                            <fieldset>
-                                <legend>Priority</legend>
-                                <input id="low" type="radio" name="priority" value="low">
-                                <label for="low">Low</label>
-                                <input id="medium" type="radio" name="priority" value="medium">
-                                <label for="medium">Medium</label>
-                                <input id="high" type="radio" name="priority" value="high">
-                                <label for="high">High</label>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <label for="message">Ask about our systems</label>
+                    <span class="input-container spacing">
+                        <label for="full-name" class="block">Full Name</label>
+                        <input 
+                            id="full-name" 
+                            type="text" 
+                            name="Full name" 
+                            placeholder="John Smith" 
+                            class="filling-space">
+                    </span>
+                    <span class="input-container">
+                        <label for="email" class="block">Email Address</label>
+                        <input 
+                        id="email" 
+                        type="email" 
+                        name="email" 
+                        placeholder="johnsmith@mail.com"
+                        class="filling-space">
+                    </span>
+                    <span class="input-container spacing">
+                        <label for="department" class="block">Choose a department:</label>
+                        <select id="department" name="department" class="filling-space">
+                            <option value="Area" disabled selected>-Area-</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Technical service">Technical service</option>
+                        </select>
+                    </span>
+                    <fieldset>
+                        <legend>Priority</legend>
+                        <span>
+                            <input id="low" type="radio" name="priority" value="low">
+                            <label for="low">Low</label>
+                        </span>
+                        <span>
+                            <input id="medium" type="radio" name="priority" value="medium">
+                            <label for="medium">Medium</label>
+                        </span>
+                        <span>
+                            <input id="high" type="radio" name="priority" value="high">
+                            <label for="high">High</label>
+                        </span>
+                    </fieldset>
+                    <label for="message" class="block">Ask about our systems</label>
                     <textarea id="message" name="message" placeholder="Enter your message"></textarea>
-                    <div>
+                    <span class="checkbox">
                         <input type="checkbox" name="robot">
                         <label>I am not a robot</label>
+                    </span>
+                    <span class="checkbox">
                         <input id="send-copy" type="checkbox" name="send-copy">
                         <label for="send-copy">Send me a copy</label>
-                    </div>
+                    </span>
                     <div>
                         <button>Submit</button>
                         <input type="reset" value="Reset">
