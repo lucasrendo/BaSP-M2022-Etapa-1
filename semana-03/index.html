@@ -17,11 +17,11 @@
     <body>
         <header>
             <img src="./assets/icons/trackgenix-logo.png" alt="company's logo" class="rr-logo">
-            <h1 class="title">Trackgenix SA</h1>
+            <h1 class="title inline-block">Trackgenix SA</h1>
         </header>
         <aside>
             <div class="sidebar">
-                <img src="./assets/icons/sidebar-button.png" alt="" class="side-btn">
+                <img src="./assets/icons/sidebar-button.png" alt="" class="menu-btn">
                 <div>
                     <p class="side-title">Menu</p>
                     <ul>
@@ -59,20 +59,24 @@
             </div>
         </aside>
         <main>
-            <section>
+            <section class="section-1">
                 <div>
-                    <h2>Manage your hours and teams with ease</h2>
-                    <p>Use Trackgenix to track time, make decisions and upgrade your productivity</p>
-                    <p>
+                    <h2 class="main-title">Manage your hours and teams with ease</h2>
+                    <p class="subtitle">Use Trackgenix to track time, make decisions and upgrade your productivity</p>
+                    <p class="secondary-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto excepturi exercitationem repellat magni 
-                        totam commodi omnis minus animi voluptatem blanditiis fugit fuga, rem nemo eaque quas autem vel quis? Totam!
+                        totam commodi omnis minus animi voluptatem a blanditiis fugit fuga, rem nemo eaque quas autem
+                        vel quis? Totam! Iusto excepturi exercitationem repellat magni totam commodi omnis minus
+                        animi voluptatem a blanditiis fugit fuga
                     </p>
-                    <a href="#">Learn more</a>
+                    <a href="#" class="more-btn inline-block">Learn more</a>
                 </div>
-                <img src="./assets/images/manage-teams.jpg" alt="" height="600" width="900">
+                <img src="./assets/images/manage-teams.jpg" alt="">
             </section>
             <section>
-                <h2>Functionalities</h2>
+                <div> <!--this div is the only way i found to have a responsive underline-->
+                    <h2 class="section-title">Functionalities</h2>
+                </div>
                 <div>
                     <article>
                         <img src="./assets/icons/calendar-icon.png" alt="" width="100" height="100">
@@ -97,7 +101,9 @@
                 </div>
             </section>
             <section>
-                <h2>Why does this mean an improvement in your work</h2>
+                <div>
+                    <h2 class="section-title">Why does this mean an improvement in your work</h2>
+                </div>
                 <div>
                     <article>
                         <img src="./assets/images/productivity-booster.jpg" alt="" width="900" height="600">
@@ -142,7 +148,9 @@
                 </div>
             </section>
             <section>
-                <h2>Get in touch with us</h2>
+                <div>
+                    <h2 class="section-title">Get in touch with us</h2>
+                </div>
                 <form action="Server URL" method="POST">
                     <div>
                         <div>
@@ -184,7 +192,9 @@
                 </form>
             </section>
             <section>
-                <h2>Our story</h2>
+                <div>
+                    <h2 class="section-title">Our story</h2>
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea quis voluptates necessitatibus aut,
                     sequi iusto, exercitationem, amet non ipsum fuga dolores qui! Deleniti ullam fugiat, natus nihil
@@ -206,7 +216,7 @@
         </main>
         <footer>
             <nav>
-                <span class="nav-block a">
+                <span class="nav-block1">
                     <p>Products</p>
                     <ol>
                         <li>
@@ -223,7 +233,7 @@
                         </li>
                     </ol>
                 </span>
-                <span class="nav-block b">
+                <span class="nav-block2">
                     <p>Company</p>
                     <ol>
                         <li>
@@ -240,7 +250,7 @@
                         </li>
                     </ol>
                 </span>
-                <span class="nav-block c">
+                <span class="nav-block3">
                     <p>Support</p>
                     <ol>
                         <li>

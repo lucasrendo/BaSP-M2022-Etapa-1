@@ -54,8 +54,8 @@ header{
     width: 100%;
     height: 77px;
     background-color: var(--grayish-navy);
-    font-size: 0px;
 }
+
 aside{
     display: inline-block;
     position: absolute;
@@ -68,6 +68,7 @@ aside{
 main{
     margin-left: 252px;
     margin-right: 78px;
+    max-width: 1100px;
 }
 
 section{
@@ -79,12 +80,12 @@ section{
 footer{
     margin-left: 252px;
     margin-right: 78px;
+    font-size: var(--subheader);
 }
 
 nav{
     position: relative;
     padding-bottom: 95px;
-    font-size: var(--subheader);
     text-align: center;
 }
 
@@ -92,6 +93,14 @@ nav{
 
 .inline-block{
     display: inline-block;
+}
+
+.more-btn{
+    padding: 14px 30px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 5px;
+    font-size: var(--button);
+    font-weight: var(--button-font);
 }
 
 .rr-logo{
@@ -103,13 +112,12 @@ nav{
 }
 
 .title{
-    display: inline-block;
-    margin-top: 21.4px;
-    margin-bottom: 8.6px;
+    margin-top: 21px;
+    margin-bottom: 9px;
     margin-left: 26.9px;
-    height: 47px;
     font-size: var(--headline);
     font-weight: var(--headline-font);
+    line-height: 47px;
     color: white;
     overflow: hidden; /*soluciona error de margin*/
 }
@@ -125,14 +133,13 @@ nav{
     
 }
 
-.side-btn{display: none;}
+.menu-btn{display: none;}
 
 .side-title{
     position: relative;
     margin-bottom: 31px;
     font-size: var(--component-title);
     font-weight: var(--component-title-font);
-    /* box-shadow: -10px 9px 0px -5px var(--grayish-navy); */
 }
 
 .side-title::after{
@@ -197,6 +204,60 @@ section::after{
     background-color: var(--grayish-navy-40);
 }
 
+.section-1 div{
+    display: inline-block;
+    position: relative;
+    margin-right: 9%;
+    width: 45%;
+    vertical-align: top;
+}
+
+.section-1 img{
+    display: inline-block;
+    width: 45%;
+}
+
+.main-title{
+    margin-bottom: 19px;
+    font-size: var(--headline);
+    font-weight: var(--headline-font);
+}
+
+.subtitle{
+    margin-bottom: 42px;
+    font-size: var(--subheader);
+}
+
+.secondary-text{
+    margin-bottom: 19px;
+    font-size: var(--component-body);
+    line-height: 17.6px;
+}
+
+.section-1 .more-btn{
+    position: absolute;
+    right: 0px;
+    bottom: -46px;
+}
+
+.section-title{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+    font-size: var(--title);
+    font-weight: var(--title-font);
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 3px;
+    width: 115%;
+    background-color: var(--light-grayish-green);
+}
+
 nav::after{
     content: "";
     position: absolute;
@@ -207,16 +268,16 @@ nav::after{
     background-color: var(--light-grayish-green);
 }
 
-.nav-block{
+footer span{
     text-align: left;
 }
 
-.a{
+.nav-block1{
     position: absolute;
     left: 113px;
 }
 
-.c{
+.nav-block3{
     position: absolute;
     right: 113px;
 }
