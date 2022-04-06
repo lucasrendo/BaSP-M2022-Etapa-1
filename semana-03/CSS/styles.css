@@ -1,5 +1,6 @@
 /*=== BASE ===*/
 
+/*Variables*/
 :root{
     /*COLOR PALETTE*/
     --grayish-navy: #373867;
@@ -24,29 +25,14 @@
     --button-font: 700;
 }
 
-*{
-    box-sizing: border-box;
-}
-
+/*Page layout and global properties*/
 body{
     position: relative;
     height: max-content;
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     color: var(--grayish-navy);
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-span{
-    display: inline-block;
-}
-
-ol{
-    list-style: decimal;
-    list-style-position: inside;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -77,71 +63,15 @@ section{
     padding-bottom: 95px;
 }
 
-input, textarea, select, button{
-    border: 1px solid var(--grayish-navy);
+section::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
     border-radius: 4px;
-    padding: 10px 12px;
-    font-size: var(--component-body);
-    font-family: inherit;
-    color: inherit;
-}
-
-input[type="radio"], input[type="checkbox"]{
-    padding: 0px;
-    margin-left: 0px;
-}
-
-form label{
-    margin-bottom: 7px;
-    font-size: var(--component-title);
-    font-weight: var(--component-title-font);
-}
-
-form span{margin-bottom: 12px;}
-
-select{
-    color: rgba(55,56,103,0.5);
-    background-color: white;
-}
-
-textarea{margin-bottom: 40px;}
-
-form div{
-    margin-top: 40px;
-}
-
-fieldset{
-    width: 47%;
-    max-width: 350px;    
-}
-
-legend{
-    margin-bottom: 9px;
-    font-size: var(--component-title);
-    font-weight: var(--component-title-font);
-}
-
-fieldset span{
-    margin-right: 15%;
-}
-
-button{
-    margin-right: 41px;
-    border-radius: 5px;
-    border: none;
-    padding: 14px 31px;
-    background-color: var(--light-grayish-green);
-    font-size: var(--button);
-    font-weight: var(--button-font);
-}
-
-input[type="reset"]{
-    margin-right: 72px;
-    border-radius: 5px;
-    padding: 14px 31px;
-    background-color: white;
-    font-size: var(--button);
-    font-weight: var(--button-font);
+    background-color: var(--grayish-navy-40);
 }
 
 footer{
@@ -156,16 +86,94 @@ nav{
     text-align: center;
 }
 
+nav::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-grayish-green);
+}
+
+footer div{position: relative;}
+
+footer span{text-align: left;}
+
+footer address{display: inline-block;}
+
+/*form styles*/
+input, textarea, select, button{
+    padding: 10px 12px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 4px;
+    font-size: var(--component-body);
+    font-family: inherit;
+    color: inherit;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    margin-left: 0px;
+    padding: 0px;
+}
+
+form label{
+    margin-bottom: 7px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-font);
+}
+
+form span{margin-bottom: 12px;}
+
+select{
+    background-color: white;
+    color: rgba(55,56,103,0.5);
+}
+
+form div{margin-top: 40px;}
+
 fieldset{
     display: inline-block;
+    width: 47%;
+    max-width: 350px;    
+}
+
+legend{
+    margin-bottom: 9px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-font);
+}
+
+fieldset span{margin-right: 15%;}
+
+button{
+    margin-right: 41px;
+    padding: 14px 31px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-grayish-green);
+    font-size: var(--button);
+    font-weight: var(--button-font);
+}
+
+input[type="reset"]{
+    margin-right: 72px;
+    padding: 14px 31px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: var(--button);
+    font-weight: var(--button-font);
 }
 
 textarea{
+    margin-bottom: 40px;
     width: 100%;
     height: 117px;
 }
 
-/*=== CLASSES ===*/
+/*=== CLASSES AND PSEUDO-CLASSES===*/
+
+/*Reusable*/
 .spacing{
     margin-right: 5.5%;
 }
@@ -179,10 +187,27 @@ textarea{
     font-weight: var(--button-font);
 }
 
-.block{
-    display: block;
+.block{display: block;}
+
+.section-title{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+    font-size: var(--title);
+    font-weight: var(--title-font);
 }
 
+.section-title::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 3px;
+    width: 115%;
+    background-color: var(--light-grayish-green);
+}
+
+/*Header*/
 .rr-logo{
     margin-top: 13px;
     margin-bottom: 5px;
@@ -203,6 +228,7 @@ textarea{
     overflow: hidden; /*soluciona error de margin*/
 }
 
+/*Aside/Sidebar*/
 .sidebar{
     position: sticky;
     top: 0px;
@@ -217,6 +243,7 @@ textarea{
 .menu-btn{display: none;}
 
 .side-title{
+    display: inline-block;
     position: relative;
     margin-bottom: 31px;
     font-size: var(--component-title);
@@ -228,16 +255,16 @@ textarea{
     position: absolute;
     top: 25px;
     left: 0;
-    border-radius: 4px;
     height: 3px;
-    width: 47px;
+    width: 125%;
+    border-radius: 4px;
     background-color: var(--grayish-navy);
 }
 
 .side-link{
     position: relative;
-    padding-left: 1px;
     margin-bottom: 33px;
+    padding-left: 1px;
     font-size: var(--secondary-body);
 }
 
@@ -246,45 +273,33 @@ textarea{
     position: absolute;
     top: 32px;
     left: 0;
-    border-radius: 3px;
     height: 1px;
     width: 100%;
+    border-radius: 3px;
     background-color: var(--grayish-navy-40);
 }
 
-.side-link2{
+.sidebar ul:nth-last-child(4){
     margin-bottom: 18px;
     font-size: var(--secondary-body);
 }
 
-.address-block{
-    margin-bottom: 36px;
-}
+.info-block{margin-bottom: 36px;}
 
-.address{
+.info{
     display: inline-block;
     position: relative;
     top: -2px;
     font-size: var(--secondary-body);
 }
 
-.address-icon{
+.info-block img{
     position: relative;
-    vertical-align: top;
     margin-right: 1px;
+    vertical-align: top;
 }
 
-section::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 4px;
-    height: 3px;
-    width: 100%;
-    background-color: var(--grayish-navy-40);
-}
-
+/*Intro section*/
 .section-1 div{
     display: inline-block;
     position: relative;
@@ -293,8 +308,8 @@ section::after{
 }
 
 .section-1 img{
-    border-radius: 10px;
     width: 47%;
+    border-radius: 10px;
 }
 
 .main-title{
@@ -320,24 +335,7 @@ section::after{
     bottom: -46px;
 }
 
-.section-title{
-    display: inline-block;
-    position: relative;
-    margin-bottom: 50px;
-    font-size: var(--title);
-    font-weight: var(--title-font);
-}
-
-.section-title::after{
-    content: "";
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    height: 3px;
-    width: 115%;
-    background-color: var(--light-grayish-green);
-}
-
+/*Functionalities section*/
 .functionality-item{
     display: inline-block;
     margin-bottom: 79px;
@@ -345,9 +343,7 @@ section::after{
     max-width: 523px;
 }
 
-.functionality-item img{
-    width: 34%;
-}
+.functionality-item img{width: 34%;}
 
 .functionality-item div{
     display: inline-block;
@@ -370,6 +366,7 @@ section::after{
     font-size: var(--subheader);
 }
 
+/*Cards section*/
 .card{
     display: inline-block;
     position: relative;
@@ -382,19 +379,17 @@ section::after{
 }
 
 .card img{
-    border-radius: 10px;
     width: 100%;
+    border-radius: 10px;
 }
 
 .card h3{
+    margin: 20px 0px;
     font-size: var(--title);
     font-weight: var(--title-font);
-    margin: 20px 0px;
 }
 
-.card p{
-    font-size: var(--subheader);
-}
+.card p{font-size: var(--subheader);}
 
 .card a{
     position: absolute;
@@ -402,43 +397,32 @@ section::after{
     left: 20px;
 }
 
-.input-container{
-    width: 47%;
-}
+/*Form section*/
+.input-container{width: 47%;}
 
-.filling-space{
-    width: 100%;
-}
+.filling-space{width: 100%;}
 
-.checkbox {margin-right: 50px;}
+select:focus-within, .enabled{color: var(--grayish-navy);}
 
+.checkbox{margin-right: 50px;}
+
+/*Story text section*/
 .story-text{font-size: var(--subheader);}
 
-nav::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: var(--light-grayish-green);
-}
+/*Footer section*/
 
-footer span{
-    text-align: left;
-}
-
-.nav-block1{
+.left-nav-block{
     position: absolute;
     left: 113px;
 }
 
-.nav-block3{
+.right-nav-block{
     position: absolute;
     right: 113px;
 }
 
 .copyright{
+    display: inline-block;
     position: absolute;
     right: 0;
     padding-top: 16px;
@@ -447,10 +431,6 @@ footer span{
 .copyright p{
     margin-bottom: 23px;
     text-align: right;
-}
-
-footer div{
-    position: relative;
 }
 
 .sm-link{

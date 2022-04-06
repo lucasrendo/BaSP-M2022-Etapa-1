@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--STYLES-->
-        <link rel="stylesheet" href="./CSS/reset.css">
+        <link rel="stylesheet" href="./css/reset.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="./CSS/styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <!--END-->
         <title>Trackgenix</title>
     </head>
@@ -34,21 +34,21 @@
                         <li class="side-link">
                             <a href="#">Log in</a>
                         </li>
-                        <li class="side-link2">
-                            <a href="#">Contact Us</a>
+                        <li>
+                            <a href="#contact-section">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="address-block">
-                        <img src="./assets/icons/mail-icon.png" alt="" class="address-icon">
-                        <p class="address">contact@trackgenix.com</p>
+                    <div class="info-block">
+                        <img src="./assets/icons/mail-icon.png" alt="">
+                        <p class="info">contact@trackgenix.com</p>
                     </div>
-                    <div class="address-block">
-                        <img src="./assets/icons/phone-icon.png" alt="" class="address-icon">
-                        <p class="address">(000) 000-0000</p>
+                    <div class="info-block">
+                        <img src="./assets/icons/phone-icon.png" alt="">
+                        <p class="info">(000) 000-0000</p>
                     </div>
-                    <div class="address-block">
-                        <img src="./assets/icons/home-icon.png" alt="" class="address-icon">
-                        <div class="address">
+                    <div class="info-block">
+                        <img src="./assets/icons/home-icon.png" alt="">
+                        <div class="info">
                             <p>1234 Somewhere road</p>
                             <p>#8254</p>
                             <p>Nashville, TN</p>
@@ -155,12 +155,12 @@
                     </article>
                 </div>
             </section>
-            <section>
+            <section id="contact-section">
                 <div>
                     <h2 class="section-title">Get in touch with us</h2>
                 </div>
                 <form action="Server URL" method="POST">
-                    <span class="input-container spacing">
+                    <span class="input-container spacing border-box">
                         <label for="full-name" class="block">Full Name</label>
                         <input 
                             id="full-name" 
@@ -182,8 +182,8 @@
                         <label for="department" class="block">Choose a department:</label>
                         <select id="department" name="department" class="filling-space">
                             <option value="Area" disabled selected>-Area-</option>
-                            <option value="Sales">Sales</option>
-                            <option value="Technical service">Technical service</option>
+                            <option value="Sales" class="enabled">Sales</option>
+                            <option value="Technical service" class="enabled">Technical service</option>
                         </select>
                     </span>
                     <fieldset>
@@ -221,7 +221,7 @@
                 <div>
                     <h2 class="section-title">Our story</h2>
                 </div>
-                <p>
+                <p class="story-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea quis voluptates necessitatibus aut,
                     sequi iusto, exercitationem, amet non ipsum fuga dolores qui! Deleniti ullam fugiat, natus nihil
                     soluta modi!
@@ -242,7 +242,7 @@
         </main>
         <footer>
             <nav>
-                <span class="nav-block1">
+                <span class="left-nav-block">
                     <p>Products</p>
                     <ol>
                         <li>
@@ -259,7 +259,7 @@
                         </li>
                     </ol>
                 </span>
-                <span class="nav-block2">
+                <span>
                     <p>Company</p>
                     <ol>
                         <li>
@@ -276,7 +276,7 @@
                         </li>
                     </ol>
                 </span>
-                <span class="nav-block3">
+                <span class="right-nav-block">
                     <p>Support</p>
                     <ol>
                         <li>
@@ -295,14 +295,14 @@
                 </span>
             </nav>
             <div>
-                <address class="inline-block">
+                <address>
                     <a href="https://www.linkedin.com"><img src="./assets/icons/linkedin-logo.png" alt="" class="sm-link"></a>
                     <a href="https://www.twitter.com"><img src="./assets/icons/twitter-logo.png" alt="" class="sm-link"></a>
                     <a href="https://www.facebook.com"><img src="./assets/icons/fb-logo.png" alt="" class="sm-link"></a>
                     <a href="https://www.instagram.com"><img src="./assets/icons/instagram-logo.png" alt="" class="sm-link"></a>
                     <a href="https://www.github.com"><img src="./assets/icons/github-logo.png" alt="" class="sm-link"></a>
                 </address>
-                <div class="inline-block copyright">
+                <div class="copyright">
                     <p>Rosario, Argentina</p>
                     <p>Copyright <i class='bx bx-copyright'></i> 2022 Radium Rocket. All rights reserved</p>
                 </div>
