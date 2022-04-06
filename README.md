@@ -12,7 +12,7 @@ Development of the HTML strcuture for Trackgenix landing. The HTML file was crea
 Also, the necessary files to start the project were added: multimedia files and this README.
 
 ### Week 3
-
+Styling of the landing page without the use of responsive tools putting the priority on the coding of reusable styles
 
 ---
 _By Lucas Rendo_ (editado) 
