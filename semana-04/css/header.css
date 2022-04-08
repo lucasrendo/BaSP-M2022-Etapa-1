@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    /* justify-content: flex-start */
+    align-items: center;
+    margin-bottom: 57px;
+    padding-left: 17px;
+    width: 100%;
+    height: 77px;
+    background-color: var(--grayish-navy);
+}
+
+/*=== CLASSES ===*/
+.rr-logo{height: 59px;}
+
+.title{
+    font-size: var(--headline);
+    font-weight: var(--headline-weight);
+    color: white;
+}
+
+/*=== MEDIA QUERIES ===*/
+@media (min-width: 768px) {
+    header{padding-left: 43px;}
+
+    .title{margin-left: 27px;}
+}

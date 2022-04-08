@@ -1,0 +1,35 @@
+/*=== BASE ===*/
+
+/*Variables*/
+:root{
+    /*COLOR PALETTE*/
+    --grayish-navy: #373867;
+    --light-grayish-green: #AACE9B;
+    --grayish-navy-40: rgba(55,56,103,0.4);
+    --grayish-navy-10: rgba(55,56,103,0.1);
+    --light-grayish-green-10: rgba(55,56,103,0.1);
+    --scarlet: #F33413;
+    --Bright-green: #49A37B;
+
+    /*TYPOGRAPHY*/
+    --headline: 40px;
+    --headline-weight: 700;
+    --title: 30px;
+    --title-weight: 700;
+    --subheader: 20px;
+    --component-title: 14px;
+    --component-title-weight: 700;
+    --component-body: 14px;
+    --secondary-body: 12px;
+    --button: 15px;
+    --button-weight: 700;
+}
+
+body{
+    position: relative;
+    height: max-content;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--grayish-navy);
+    scroll-behavior: smooth;
+}
