@@ -56,3 +56,7 @@ a{
 span{
   display: inline-block;
 }
+
+img{
+  max-width: 100%;
+}
