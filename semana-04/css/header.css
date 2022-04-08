@@ -1,9 +1,10 @@
 header{
     display: flex;
-    /* justify-content: flex-start */
+    position: sticky;
+    top: 0px;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 57px;
-    padding-left: 17px;
+    padding: 0 7px;
     width: 100%;
     height: 77px;
     background-color: var(--grayish-navy);
@@ -16,11 +17,17 @@ header{
     font-size: var(--headline);
     font-weight: var(--headline-weight);
     color: white;
+    text-align: center;
+}
+
+.bx-menu{
+    font-size: 45px;
+    color: white;
 }
 
 /*=== MEDIA QUERIES ===*/
 @media (min-width: 768px) {
-    header{padding-left: 43px;}
+    header{padding: 0 30px;}
 
     .title{margin-left: 27px;}
 }

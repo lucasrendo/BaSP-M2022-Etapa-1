@@ -12,9 +12,9 @@
     --Bright-green: #49A37B;
 
     /*TYPOGRAPHY*/
-    --headline: 40px;
+    --headline: 32px;
     --headline-weight: 700;
-    --title: 30px;
+    --title: 26px;
     --title-weight: 700;
     --subheader: 20px;
     --component-title: 14px;
@@ -32,4 +32,23 @@ body{
     font-weight: 400;
     color: var(--grayish-navy);
     scroll-behavior: smooth;
+}
+
+/*=== CLASSES ===*/
+
+/*Global*/
+.flex-container{
+    display: flex;
+}
+
+/*=== MEDIA QUERIES ===*/
+
+@media (min-width: 768px){
+    :root{
+        --headline: 40px;
+        --headline-font: 700;
+        --title: 30px;
+        --title-font: 700;
+        --subheader: 20px;
+    }
 }
