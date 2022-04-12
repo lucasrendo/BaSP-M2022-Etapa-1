@@ -4,6 +4,7 @@ footer{
     padding-right: 5%;
     padding-bottom: 21px;
     font-size: var(--subheader);
+    line-height: 1.4em;
 }
 
 nav{
