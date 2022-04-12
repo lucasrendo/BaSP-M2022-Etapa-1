@@ -41,8 +41,52 @@ img{height: fit-content;}
 aside + div{
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px;
+    max-width: 1400px;
 }
+
+/*form styles*/   
+input, textarea, select, button{
+    padding: 10px 12px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 4px;
+    font-size: var(--component-body);
+    font-family: inherit;
+    color: inherit;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    margin: 0 8px 0 0;
+    padding: 0px;
+    width: auto;
+}
+
+label p{
+    margin-bottom: 7px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-weight);
+}
+
+select{
+    background-color: white;
+    color: rgba(55,56,103,0.5);
+}
+
+legend{
+    margin-bottom: 9px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-weight);
+}
+
+form button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-grayish-green);
+    font-size: var(--button);
+    font-weight: var(--button-weight);
+}
+
+/*los estilos del form pertenece al main pero va aca porque son estilos globales*/
 
 /*=== CLASSES ===*/
 
@@ -52,9 +96,10 @@ aside + div{
 
 .link-btn{
     display: inline-block;
-    padding: 14px 30px;
+    padding: 10px 20px;
     border: 1px solid var(--grayish-navy);
     border-radius: 5px;
+    background-color: transparent;
     font-size: var(--button);
     font-weight: var(--button-weight);
 }
@@ -87,5 +132,11 @@ aside + div{
         --title: 30px;
         --title-font: 700;
         --subheader: 20px;
+    }
+
+    .link-btn{padding: 14px 30px;}
+
+    form button{
+        padding: 14px 36px;
     }
 }

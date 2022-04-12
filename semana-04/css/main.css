@@ -30,8 +30,44 @@ main > :first-child img{
     margin-bottom: 18px;
 }
 
+label{
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+input, select, fieldset, textarea{width: 100%;}
+
+fieldset{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+label span {font-weight: 700;}
+
+form > :nth-child(2){ /*textarea container*/
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+textarea{
+    height: 120px;
+}
+
+form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+input[type="reset"]{
+    width: auto;
+}
+
 /*=== CLASSES ===*/
 
+/*Introduction*/
 .section-1 h2{
     margin-bottom: 8px;
     font-size: var(--headline);
@@ -48,6 +84,7 @@ main > :first-child img{
     line-height: 17px;
 }
 
+/*Functionalities*/
 .functionalities {
     display: flex;
     flex-direction: column;
@@ -81,6 +118,7 @@ main > :first-child img{
     font-size: var(--subheader);
 }
 
+/*Cards*/
 .cards{
     display: flex;
     flex-direction: column;
@@ -107,6 +145,15 @@ main > :first-child img{
     font-size: var(--subheader);
 }
 
+/*Form*/
+form .flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-block{width: 100%;}
+
+/*Story*/
 main > :nth-child(5) p{
     margin-bottom: 1.14rem;
     line-height: 1.142rem;
@@ -116,13 +163,13 @@ main > :nth-child(5) p{
 
 @media (min-width: 768px){
     main{margin-bottom: 57px;}
-
-    .section-1 :nth-child(2){margin-bottom: 36px;}
-
+    
     section{
         margin-bottom: 71px;
         padding-bottom: 57px;
     }
+    
+    .section-1 :nth-child(2){margin-bottom: 36px;}
 
     .functionality-item{
         flex-direction: row;
@@ -154,6 +201,34 @@ main > :nth-child(5) p{
     .cards article{width: 47%;}
 
     .cards :nth-of-type(odd){margin-right: 5%;}
+
+    main > :nth-child(5) p{
+        margin-bottom: 1.14em;
+        font-size: var(--subheader);
+        line-height: 1.142em;
+    }
+
+    form .flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .input-block{width: 47%;}
+    
+    fieldset{
+        width: 47%;
+        margin: 0px;
+    }
+   
+    form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+        justify-content: center;
+    }
+
+    form button{margin-right: 45px;}
+
+    input[name="send-copy"]{margin-left: 45px;}
 }
 
 @media (min-width: 1024px){
@@ -185,4 +260,13 @@ main > :nth-child(5) p{
     }
 
     .functionality-item{max-width: 47%;}
+
+     
+    form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+        justify-content: flex-start;
+    }
+
+    form button{margin-right: 40px;}
+
+    input[name="send-copy"]{margin-left: 75px;}
 }

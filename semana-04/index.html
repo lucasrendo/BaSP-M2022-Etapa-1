@@ -155,42 +155,56 @@
                     <section>
                         <h2 class="section-title">Get in touch with us</h2>
                         <form action="Server URL" method="POST">
-                            <div>
-                                <div>
-                                    <label for="full-name">Full Name</label>
-                                    <input id="full-name" type="text" name="Full name" placeholder="John Smith">
-                                    <label for="department">Choose a department:</label>
-                                    <select id="department" name="department">
+                            <div class="flex-container">
+                                <label class="input-block">
+                                    <p>Full Name</p>
+                                    <input type="text" name="Full name" placeholder="John Smith">
+                                </label>
+                                <label class="input-block">
+                                    <p>Email Address</p>
+                                    <input type="email" name="email" placeholder="johnsmith@mail.com">
+                                </label>
+                                <label class="input-block">
+                                    <p>Choose a department:</p>
+                                    <select name="department">
                                         <option value="Area" disabled selected>-Area-</option>
                                         <option value="Sales">Sales</option>
                                         <option value="Technical service">Technical service</option>
                                     </select>
-                                </div>
-                                <div>
-                                    <label for="email">Email Address</label>
-                                    <input id="email" type="email" name="email" placeholder="johnsmith@mail.com">
-                                    <fieldset>
-                                        <legend>Priority</legend>
-                                        <input id="low" type="radio" name="priority" value="low">
-                                        <label for="low">Low</label>
-                                        <input id="medium" type="radio" name="priority" value="medium">
-                                        <label for="medium">Medium</label>
-                                        <input id="high" type="radio" name="priority" value="high">
-                                        <label for="high">High</label>
-                                    </fieldset>
-                                </div>
+                                </label>
+                                <fieldset class="input-block">
+                                    <legend>Priority</legend>
+                                    <label>
+                                        <input type="radio" name="priority" value="low">
+                                        <span>Low</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="priority" value="medium">
+                                        <span>Medium</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="priority" value="high">
+                                        <span>High</span>
+                                    </label>
+                                </fieldset>
                             </div>
-                            <label for="message">Ask about our systems</label>
-                            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                            <label>
+                                <p>Ask about our systems</p>
+                                <textarea name="message" placeholder="Enter your message"></textarea>
+                            </label>
                             <div>
-                                <input type="checkbox" name="robot">
-                                <label>I am not a robot</label>
-                                <input id="send-copy" type="checkbox" name="send-copy">
-                                <label for="send-copy">Send me a copy</label>
+                                <label>
+                                    <input type="checkbox" name="robot">
+                                    <span>I am not a robot</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="send-copy">
+                                    <span>Send me a copy</span>
+                                </label>
                             </div>
                             <div>
                                 <button>Submit</button>
-                                <input type="reset" value="Reset">
+                                <input type="reset" value="Reset" class="link-btn">
                             </div>
                         </form>
                     </section>
