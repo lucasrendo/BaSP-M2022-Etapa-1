@@ -1,6 +1,8 @@
 aside{
     display: none;
     position: absolute;
+    flex-shrink: 0;
+    z-index: 1;
     top: 77px;
     height: calc(100vh - 77px);
     padding: 24px 13px 0 13px;
