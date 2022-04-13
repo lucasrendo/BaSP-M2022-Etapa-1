@@ -21,21 +21,17 @@ section::after{
     background-color: var(--grayish-navy-40);
 }
 
-main > :first-child {
-    flex-direction: column;
-}
-
-main > :first-child img{
-    border-radius: 10px;
-    margin-bottom: 18px;
-}
-
 label{
     display: inline-block;
     margin-bottom: 12px;
 }
 
-input, select, fieldset, textarea{width: 100%;}
+input, 
+select, 
+fieldset, 
+textarea{
+    width: 100%;
+}
 
 fieldset{
     display: flex;
@@ -44,18 +40,16 @@ fieldset{
     margin: 15px 0px;
 }
 
-label span {font-weight: 700;}
-
-form > :nth-child(2){ /*textarea container*/
-    width: 100%;
-    margin-bottom: 30px;
+label span {
+    font-weight: 700;
 }
 
 textarea{
     height: 120px;
 }
 
-form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+form > :nth-child(3),
+form > :nth-child(4){ /*checkbox and buttons*/
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 35px;
@@ -68,6 +62,15 @@ input[type="reset"]{
 /*=== CLASSES ===*/
 
 /*Introduction*/
+main > :first-child {
+    flex-direction: column;
+}
+
+main > :first-child img{
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+
 .section-1 h2{
     margin-bottom: 8px;
     font-size: var(--headline);
@@ -104,6 +107,7 @@ input[type="reset"]{
 }
 
 .functionality-item div{
+    min-width: 300px;
     text-align: center;
 }
 
@@ -134,7 +138,9 @@ input[type="reset"]{
     border-radius: 10px;
 }
 
-.cards img{border-radius: 10px;}
+.cards img{
+    border-radius: 10px;
+}
 
 .cards h3{
     margin: 20px 0px;
@@ -154,7 +160,14 @@ form .flex-container{
     flex-direction: column;
 }
 
-.input-block{width: 100%;}
+.input-block{
+    width: 100%;
+}
+
+form > :nth-child(2){ /*textarea container*/
+    margin-bottom: 30px;
+    width: 100%;
+}
 
 /*Story*/
 main > :nth-child(5) p{
@@ -165,14 +178,18 @@ main > :nth-child(5) p{
 /*=== MEDIA QUERIES ===*/
 
 @media (min-width: 768px){
-    main{margin-bottom: 57px;}
+    main{
+        margin-bottom: 57px;
+    }
     
     section{
         margin-bottom: 71px;
         padding-bottom: 57px;
     }
     
-    .section-1 :nth-child(2){margin-bottom: 36px;}
+    .section-1 :nth-child(2){
+        margin-bottom: 36px;
+    }
 
     .functionality-item{
         flex-direction: row;
@@ -180,7 +197,6 @@ main > :nth-child(5) p{
     }
 
     .functionality-item img{
-        max-width: none;
         margin-right: 23px;
     }
 
@@ -193,7 +209,9 @@ main > :nth-child(5) p{
         margin-bottom: 17px;
     }
 
-    .functionality-item p{text-align: left;}
+    .functionality-item p{
+        text-align: left;
+    }
 
     .cards{
         flex-direction: row;
@@ -201,9 +219,13 @@ main > :nth-child(5) p{
         align-content: center;
     }
     
-    .cards article{width: 47%;}
+    .cards article{
+        width: 47%;
+    }
 
-    .cards :nth-of-type(odd){margin-right: 5%;}
+    .cards :nth-of-type(odd){
+        margin-right: 5.5%;
+    }
 
     main > :nth-child(5) p{
         margin-bottom: 1.14em;
@@ -218,20 +240,27 @@ main > :nth-child(5) p{
         flex-wrap: wrap;
     }
     
-    .input-block{width: 47%;}
+    .input-block{
+        width: 47%;
+    }
     
     fieldset{
-        width: 47%;
         margin: 0px;
+        width: 47%;
     }
    
-    form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+    form > :nth-child(3), 
+    form > :nth-child(4){ /*checkbox and buttons*/
         justify-content: center;
     }
 
-    form button{margin-right: 45px;}
+    form button{
+        margin-right: 45px;
+    }
 
-    input[name="send-copy"]{margin-left: 45px;}
+    input[name="send-copy"]{
+        margin-left: 45px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -245,13 +274,17 @@ main > :nth-child(5) p{
     }
 
     main > :first-child img{
-        max-width: 50%;
         margin-left: 71px;
+        max-width: 50%;
     }
     
-    .section-1 h2{margin-bottom: 19px;}
+    .section-1 h2{
+        margin-bottom: 19px;
+    }
 
-    .section-1 :nth-child(2){margin-bottom: 42px;}
+    .section-1 :nth-child(2){
+        margin-bottom: 42px;
+    }
 
     .functionalities{
         flex-direction: row;
@@ -259,24 +292,32 @@ main > :nth-child(5) p{
     }
     
     .functionalities :nth-of-type(odd){
-       margin-right: 5%;
+       margin-right: 5.5%;
     }
 
-    .functionality-item{max-width: 47%;}
-
+    .functionality-item{
+        max-width: 47%;
+    }
      
-    form > :nth-child(3), form > :nth-child(4){ /*checkbox and buttons*/
+    form > :nth-child(3),
+    form > :nth-child(4){ /*checkbox and buttons*/
         justify-content: flex-start;
     }
 
-    form button{margin-right: 40px;}
+    form button{
+        margin-right: 40px;
+    }
 
-    input[name="send-copy"]{margin-left: 75px;}
+    input[name="send-copy"]{
+        margin-left: 75px;
+    }
 
     .breaking-text p{
         display: inline-block;
         width: 47%;
     }
 
-    .breaking-text :first-child{margin-right: 5.5%;}
+    .breaking-text :first-child{
+        margin-right: 5.5%;
+    }
 }

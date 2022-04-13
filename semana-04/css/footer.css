@@ -1,8 +1,8 @@
 footer{
-    max-width: 100vw;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 21px;
+    max-width: 100vw;
     font-size: var(--subheader);
     line-height: 1.4em;
 }
@@ -29,7 +29,11 @@ nav::after{
     background-color: var(--light-grayish-green);
 }
 
-address{text-align: center;}
+address{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
 
 /*=== CLASSES ===*/
 
@@ -55,13 +59,21 @@ address{text-align: center;}
         justify-content: space-around;
     }
 
-    nav div{min-width: initial;}
+    nav div{
+        min-width: initial;
+    }
 
-    .social-media{align-items:flex-start;}
+    .social-media{
+        align-items:flex-start;
+    }
 
     .social-media div{
         max-width: initial;
         text-align: left;
+    }
+
+    address{
+        justify-content: left;
     }
  }
 
@@ -71,5 +83,7 @@ address{text-align: center;}
     justify-content: space-between;
     }
 
-    .social-media div{text-align: right;}   
+    .social-media div{
+        text-align: right;
+    }   
  }

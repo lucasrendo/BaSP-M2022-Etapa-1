@@ -1,13 +1,13 @@
 aside{
-    display: none;
+    /* display: none; */
     position: absolute;
     flex-shrink: 0;
     z-index: 1;
     top: 77px;
-    height: calc(100vh - 77px);
     padding: 24px 13px 0 13px;
-    font-size: var(--secondary-body);
+    height: calc(100vh - 77px);
     background-color: var(--light-grayish-green);
+    font-size: var(--secondary-body);
 }
 
 aside ul{
@@ -51,6 +51,19 @@ aside ul{
     background-color: var(--grayish-navy-40);
 }
 
+aside a:hover{
+    color: var(--bright-green);
+}
+
+aside a:target{
+    color: var(--bright-green);
+    font-weight: 700;
+}
+
+aside a:active{
+    color: white;
+}
+
 aside .flex-container{
     align-items: flex-start;
     margin-top: 36px;
@@ -63,5 +76,7 @@ aside .flex-container{
 /*=== MEDIA QUERIES ===*/
 
 @media (min-width: 768px){
-    aside{position: sticky;}
+    aside{
+        position: sticky;
+    }
 }
