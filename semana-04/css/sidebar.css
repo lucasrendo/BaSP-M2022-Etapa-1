@@ -1,6 +1,6 @@
 aside{
     /* display: none; */
-    position: absolute;
+    position: fixed;
     flex-shrink: 0;
     z-index: 1;
     top: 77px;
