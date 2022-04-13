@@ -14,5 +14,8 @@ Also, the necessary files to start the project were added: multimedia files and 
 ### Week 3
 Styling of the landing page without the use of responsive tools putting the priority on the coding of reusable styles
 
+### Week 4
+Styling of the landing page starting with CSS from 0 to make it responsive across any viewport
+
 ---
 _By Lucas Rendo_ (editado) 
