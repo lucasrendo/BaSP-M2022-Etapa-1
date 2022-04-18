@@ -23,5 +23,5 @@ console.log('\t' + fullName);
 console.log('\n\t-Exercise 1.c:');
 var string1 = '13 characters';
 var string2 = '19 character string';
-var stringsLength = string1.length + string2.length
+var stringsLength = string1.length + string2.length;
 console.log('\t' + stringsLength);
