@@ -17,5 +17,8 @@ Styling of the landing page without the use of responsive tools putting the prio
 ### Week 4
 Styling of the landing page starting with CSS from 0 to make it responsive across any viewport
 
+### Week 5
+JS fundamentals: this week's folder was filled with excercises to learn and practice the logic and syntax of JavaScript. Also the errors found in week's 4 CSS got fixed
+
 ---
 _By Lucas Rendo_ (editado) 

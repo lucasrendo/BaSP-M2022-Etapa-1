@@ -1,3 +1,15 @@
+/*  CORRECCIONES
+    - cards now have fixed height so all the cards have the same height and link button is absolute positioned
+    bottom left of the card
+    - functionality item min-width fixed. Decreased the min-width value so that there's no overflow on the x-axis which
+    caused the width of the 2 element to be wider than the width of the viewport pushing the html element to the right,
+    which in turn generated space that can't be filled by the body. Alse overflow added as aditional measure
+
+    - Pedirle feedback a Franco para ver si esta bien ahora la primera seccion donde dijo que los media queries
+    no estaban bien utilizados
+    - Revisar aparicion de elementos y clases
+*/
+
 main{
     margin-top: 61px;
     padding-right: 5%;  
@@ -103,12 +115,13 @@ main > :first-child img{
 }
 
 .functionality-item img{
-    max-width: 130px;
+    max-width: 120px;
 }
 
 .functionality-item div{
-    min-width: 300px;
+    min-width: 250px;
     text-align: center;
+    overflow: hidden;
 }
 
 .functionality-item h3{
@@ -132,8 +145,10 @@ main > :first-child img{
 }
 
 .cards article{
+    position: relative;
     margin-bottom: 31px;
     padding: 20px;
+    height: 650px;
     background-color: var(--grayish-navy-10);
     border-radius: 10px;
 }
@@ -152,6 +167,12 @@ main > :first-child img{
     margin-bottom: 17px;
     font-size: var(--subheader);
     line-height: 1.1em;
+}
+
+.cards a{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
 /*Form*/

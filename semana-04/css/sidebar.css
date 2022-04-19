@@ -1,5 +1,14 @@
+/*  CORRECTIONS
+    - aside{overflow: scroll;}: soluciona desborde del sidebar por ser el contenido mayor al alto del viewport (chequear con Franco)
+    - se quito aside{position:sticky} cuando viewport>768px y se puso cuando viewport>1024px
+    - Se quita por completo aside{display: none;} en viewport>1024px
+    - a:hover cambia su efecto
+
+ - Revisar aparicion de elementos y clases
+*/
+
 aside{
-    /* display: none; */
+    display: none;
     position: fixed;
     flex-shrink: 0;
     z-index: 1;
@@ -8,6 +17,7 @@ aside{
     height: calc(100vh - 77px);
     background-color: var(--light-grayish-green);
     font-size: var(--secondary-body);
+    overflow: scroll;
 }
 
 aside ul{
@@ -52,7 +62,7 @@ aside ul{
 }
 
 aside a:hover{
-    color: var(--bright-green);
+    text-shadow: 0 4px 4px #000000a1;
 }
 
 aside a:target{
@@ -75,8 +85,9 @@ aside .flex-container{
 
 /*=== MEDIA QUERIES ===*/
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     aside{
+        display: block;
         position: sticky;
     }
 }

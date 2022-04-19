@@ -1,3 +1,11 @@
+/* CORRECTIONS
+    - Hide and make unreachable by click events the sidebar button in desktop but keeps it in the document
+    flow to mantain flex alignment of elements unchanged.
+    - header whitespace on the right automatically fixed by changing a width property on main.css (details in that stylesheet)
+
+ - Revisar aparicion de elementos y clases
+*/
+
 header{
     display: flex;
     position: sticky;
@@ -36,5 +44,12 @@ header{
 
     .title{
         margin-left: 27px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .bx-menu{
+        visibility: hidden;
+        pointer-events: none;
     }
 }
