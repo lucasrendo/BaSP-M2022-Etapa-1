@@ -39,4 +39,4 @@ var fillArray = [];
 for(var i=0; i<10; i++){
     fillArray[i] = i;
 };
-console.log(fillArray.join(', '));
+console.log('\t' + fillArray.join(', '));
