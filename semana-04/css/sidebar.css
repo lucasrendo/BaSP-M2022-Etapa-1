@@ -17,7 +17,7 @@ aside{
     height: calc(100vh - 77px);
     background-color: var(--light-grayish-green);
     font-size: var(--secondary-body);
-    overflow: scroll;
+    overflow: auto;
 }
 
 aside ul{
