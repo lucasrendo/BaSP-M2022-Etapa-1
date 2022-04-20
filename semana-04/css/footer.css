@@ -67,6 +67,10 @@ address{
         min-width: initial;
     }
 
+    address{
+        justify-content: left;
+    }
+
     .social-media{
         align-items:flex-start;
     }
@@ -74,10 +78,6 @@ address{
     .social-media div{
         max-width: initial;
         text-align: left;
-    }
-
-    address{
-        justify-content: left;
     }
  }
 

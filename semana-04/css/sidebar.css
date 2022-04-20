@@ -17,11 +17,24 @@ aside{
     height: calc(100vh - 77px);
     background-color: var(--light-grayish-green);
     font-size: var(--secondary-body);
-    overflow: auto;
+    overflow:auto;
 }
 
 aside ul{
     margin-bottom: 18px;
+}
+
+aside a:hover{
+    text-shadow: 0 4px 4px #000000a1;
+}
+
+aside a:target{
+    color: var(--bright-green);
+    font-weight: 700;
+}
+
+aside a:active{
+    color: white;
 }
 
 /*=== CLASSES ===*/
@@ -59,19 +72,6 @@ aside ul{
     width: 100%;
     border-radius: 3px;
     background-color: var(--grayish-navy-40);
-}
-
-aside a:hover{
-    text-shadow: 0 4px 4px #000000a1;
-}
-
-aside a:target{
-    color: var(--bright-green);
-    font-weight: 700;
-}
-
-aside a:active{
-    color: white;
 }
 
 aside .flex-container{
