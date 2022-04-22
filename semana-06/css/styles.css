@@ -94,10 +94,6 @@ form button{
     cursor: pointer;
 }
 
-form button:hover{
-    font-weight: 600;
-}
-
 form button:target{
     outline: 3px solid var(--grayish-navy);
 }
