@@ -1,0 +1,60 @@
+/*  CORRECCIONES
+    - Revisar aparicion de elementos y clases
+*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 21px;
+    border-top: 3px solid var(--light-grayish-green);
+    font-size: var(--subheader);
+    line-height: 1.4em;
+}
+
+address{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+footer > div{
+    max-width: 320px;
+    text-align: center;
+    line-height: 32px;
+}
+
+/*=== CLASSES ===*/
+
+.sm-link{
+    margin: 24px 18px;
+}
+
+/*=== MEDIA QUERIES ===*/
+ @media (min-width: 768px){
+    address{
+        justify-content: left;
+    }
+
+    footer{
+        align-items:flex-start;
+    }
+
+    footer > div{
+        max-width: initial;
+        text-align: left;
+    }
+ }
+
+ @media (min-width: 1024px){
+    footer {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    footer > div{
+        text-align: right;
+    }   
+ }

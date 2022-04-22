@@ -1,0 +1,374 @@
+/*  CORRECCIONES
+    - cards now have fixed height so all the cards have the same height and link button is absolute positioned
+    bottom left of the card
+    - functionality item min-width fixed. Decreased the min-width value so that there's no overflow on the x-axis which
+    caused the width of the 2 element to be wider than the width of the viewport pushing the html element to the right,
+    which in turn generated space that can't be filled by the body. Alse overflow added as aditional measure
+
+    - Pedirle feedback a Franco para ver si esta bien ahora la primera seccion donde dijo que los media queries
+    no estaban bien utilizados
+    - Revisar aparicion de elementos y clases
+*/
+aside + div{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+main{
+    margin-top: 61px;
+    padding-right: 5%;  
+    padding-left: 5%;
+}
+
+main > :first-child {
+    flex-direction: column;
+}
+
+main > :first-child img{
+    margin-bottom: 18px;
+    border-radius: 10px;
+}
+
+section{
+    position: relative;
+    margin-bottom: 41px;
+    padding-bottom: 29px;
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: var(--grayish-navy-40);
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+input, 
+select, 
+fieldset, 
+textarea{
+    width: 100%;
+}
+
+fieldset{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+label span {
+    font-weight: 700;
+}
+
+form > :nth-child(2){ /*textarea container*/
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+textarea{
+    height: 120px;
+}
+
+form > :nth-child(3),
+form > :nth-child(4){ /*checkbox and buttons*/
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+input[type="reset"]{
+    width: auto;
+}
+
+main > :nth-child(5) p{
+    margin-bottom: 35px;
+    line-height: 1.618em;
+}
+
+nav{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 95px;
+    font-size: var(--subheader);
+    line-height: 1.4em;
+}
+
+nav div{
+    margin-bottom: 25px;
+    min-width: 157px; /*hijo mas largo, sin esto el centrado con flex no se ve bien*/
+}
+
+/*=== CLASSES ===*/
+
+/*Introduction*/
+
+.section-1 h2{
+    margin-bottom: 8px;
+    font-size: var(--headline);
+    font-weight: var(--headline-weight);
+}
+
+.section-1 :nth-child(2){
+    margin-bottom: 13px;
+    font-size: var(--subheader);
+    line-height: 1.618em;
+}
+
+.section-1 :nth-child(3){
+    margin-bottom: 19px;
+    line-height: 1.618em;
+}
+
+/*Functionalities*/
+.functionalities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.functionality-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.functionality-item img{
+    max-width: 120px;
+}
+
+.functionality-item div{
+    min-width: 250px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.functionality-item h3{
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: var(--title);
+    font-weight: var(--title-weight);
+}
+
+.functionality-item p{
+    text-align: center;
+    font-size: var(--subheader);
+    line-height: 1.618em;
+}
+
+/*Cards*/
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards article{
+    position: relative;
+    margin-bottom: 31px;
+    padding: 20px;
+    height: 650px;
+    background-color: var(--grayish-navy-10);
+    border-radius: 10px;
+}
+
+.cards img{
+    border-radius: 10px;
+}
+
+.cards h3{
+    margin: 20px 0px;
+    font-size: var(--title);
+    font-weight: var(--title-weight);
+}
+
+.cards p{
+    margin-bottom: 17px;
+    font-size: var(--subheader);
+    line-height: 1.1em;
+}
+
+.cards a{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/*Form*/
+form .flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-block{
+    width: 100%;
+}
+
+/*=== MEDIA QUERIES ===*/
+
+@media (min-width: 768px){
+    main{
+        margin-bottom: 57px;
+    }
+    
+    section{
+        margin-bottom: 71px;
+        padding-bottom: 57px;
+    }
+
+    fieldset{
+        margin: 0px;
+        width: 47%;
+    }
+
+    form > :nth-child(3), 
+    form > :nth-child(4){ /*checkbox and buttons*/
+        justify-content: center;
+    }
+
+    form button{
+        margin-right: 45px;
+    }
+
+    input[name="send-copy"]{
+        margin-left: 45px;
+    }
+
+    main > :nth-child(5) p{
+        margin-bottom: 1.14em;
+        font-size: var(--subheader);
+        line-height: 1.142em;
+    }
+
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav div{
+        min-width: initial;
+    }
+    
+    .section-1 :nth-child(2){
+        margin-bottom: 36px;
+    }
+
+    .functionality-item{
+        flex-direction: row;
+        margin-bottom: 43px;
+    }
+
+    .functionality-item img{
+        margin-right: 23px;
+    }
+
+    .functionality-item div{
+        text-align: left;
+    }
+
+    .functionality-item h3{
+        margin-top: 0;
+        margin-bottom: 17px;
+    }
+
+    .functionality-item p{
+        text-align: left;
+    }
+
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+    .cards article{
+        width: 47%;
+    }
+
+    .cards :nth-of-type(odd){
+        margin-right: 5.5%;
+    }
+
+    form .flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .input-block{
+        width: 47%;
+    }
+}
+
+@media (min-width: 1024px){
+    section{
+        margin-bottom: 57px;
+        padding-bottom: 95px;
+    }
+    
+    main > :first-child {
+        flex-direction: row-reverse;
+    }
+
+    main > :first-child img{
+        margin-left: 71px;
+        max-width: 50%;
+    }
+
+    form > :nth-child(3),
+    form > :nth-child(4){ /*checkbox and buttons*/
+        justify-content: flex-start;
+    }
+
+    form button{
+        margin-right: 40px;
+    }
+
+    input[name="send-copy"]{
+        margin-left: 75px;
+    }
+    
+    .section-1 h2{
+        margin-bottom: 19px;
+    }
+
+    .section-1 :nth-child(2){
+        margin-bottom: 42px;
+    }
+
+    .functionalities{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .functionalities :nth-of-type(odd){
+       margin-right: 5.5%;
+    }
+
+    .functionality-item{
+        max-width: 47%;
+    }
+
+    .breaking-text p{
+        display: inline-block;
+        width: 47%;
+    }
+
+    .breaking-text :first-child{
+        margin-right: 5.5%;
+    }
+}

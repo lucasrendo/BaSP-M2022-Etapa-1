@@ -1,0 +1,50 @@
+article{
+    margin: 5% auto 0px;
+    padding: 5%;
+    border: 4px solid var(--grayish-navy);
+    border-radius: 10px;
+    min-width: max-content;
+    max-width: 600px;
+    min-height: max-content;
+    max-height: 400px;
+    font-size: var(--component-body);
+    color: var(--grayish-navy);
+}
+
+article h2{
+    margin-bottom: 22px;
+    font-size: var(--title);
+    font-weight: var(--title-weight);
+}
+
+article > div{
+    display: flex;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 22px;
+}
+
+label p{
+    margin-bottom: 7px;
+}
+
+button[type="submit"]{
+    background-color: var(--light-grayish-green);
+}
+
+/***************
+* CLASSES
+**************/
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

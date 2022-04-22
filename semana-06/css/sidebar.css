@@ -1,0 +1,93 @@
+/*  CORRECTIONS
+    - aside{overflow: scroll;}: soluciona desborde del sidebar por ser el contenido mayor al alto del viewport (chequear con Franco)
+    - se quito aside{position:sticky} cuando viewport>768px y se puso cuando viewport>1024px
+    - Se quita por completo aside{display: none;} en viewport>1024px
+    - a:hover cambia su efecto
+
+ - Revisar aparicion de elementos y clases
+*/
+
+aside{
+    display: none;
+    position: fixed;
+    flex-shrink: 0;
+    z-index: 1;
+    top: 77px;
+    padding: 24px 13px 0 13px;
+    height: calc(100vh - 77px);
+    background-color: var(--light-grayish-green);
+    font-size: var(--secondary-body);
+    overflow:auto;
+}
+
+aside ul{
+    margin-bottom: 18px;
+}
+
+aside a:hover{
+    text-shadow: 0 4px 4px #000000a1;
+}
+
+aside a:target{
+    color: var(--bright-green);
+    font-weight: 700;
+}
+
+aside a:active{
+    color: white;
+}
+
+/*=== CLASSES ===*/
+.side-title{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 31px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-weight);
+}
+
+.side-title::after{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 3px;
+    width: 125%;
+    border-radius: 4px;
+    background-color: var(--grayish-navy);
+}
+
+.side-link{
+    position: relative;
+    margin-bottom: 33px;
+    padding-left: 1px;
+}
+
+.side-link::after{
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: var(--grayish-navy-40);
+}
+
+aside .flex-container{
+    align-items: flex-start;
+    margin-top: 36px;
+}
+
+.side-icon{
+    margin-right: 5px;
+}
+
+/*=== MEDIA QUERIES ===*/
+
+@media (min-width: 1024px){
+    aside{
+        display: block;
+        position: sticky;
+    }
+}
