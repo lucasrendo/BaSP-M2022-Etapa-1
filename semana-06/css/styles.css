@@ -92,7 +92,6 @@ form button{
     font-weight: var(--button-weight);
     box-shadow: 0px 4px 4px #00000040;
     cursor: pointer;
-    transition: transform 100ms;
 }
 
 form button:hover{

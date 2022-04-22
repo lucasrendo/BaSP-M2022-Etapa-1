@@ -52,6 +52,7 @@ footer > div{
     footer {
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 0px;
     }
 
     footer > div{
