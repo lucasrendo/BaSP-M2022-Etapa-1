@@ -9,11 +9,13 @@
         <!--STYLES-->
         <link rel="stylesheet" href="./../css/reset.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
         <link rel="stylesheet" href="./../css/styles.css">
         <link rel="stylesheet" href="./../css/header.css">
         <link rel="stylesheet" href="./../css/footer.css">
         <link rel="stylesheet" href="./../css/login.css">
         <title>Login</title>
+        <!--SCRIPTS-->
     </head>
     <body>
         <header>
@@ -28,20 +30,25 @@
         <article>
             <h2>Log in</h2>
             <div>
-                <form action="" method="post" id="login-form">
+                <form action="" method="post">
                     <label>
                         <p>Username</p>
-                        <input type="email" placeholder="Username">
+                        <input type="email" placeholder="Username" id="user">
                     </label>
                     <label>
                         <p>Password</p>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="password">
                     </label>
                 </form>
                 <div class="buttons ">
                     <button type="submit" form="login-form">Log in</button>
                     <a href="./retrieve-password">Forgot password?</a>
                 </div>
+            </div>
+            <!--Could go little title here-->
+            <div id="display-data">
+                <p></p>
+                <p></p>
             </div>
         </article>../
         <footer>
@@ -62,5 +69,6 @@
                 <p>Copyright <i class='bx bx-copyright'></i> 2022 Radium Rocket. All rights reserved</p>
             </div>
         </footer>
+        <script src="./../JS/login.js"></script>    
     </body>
 </html>

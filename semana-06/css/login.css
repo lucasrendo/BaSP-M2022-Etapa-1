@@ -23,7 +23,7 @@ article h2{
     font-weight: var(--title-weight);
 }
 
-article > div{
+article > :nth-child(2){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,6 +35,10 @@ form{
     row-gap: 22px;
     margin-bottom: 22px;
 }
+
+/* label{
+    position: relative;
+} */
 
 label p{
     margin-bottom: 7px;
@@ -88,6 +92,25 @@ button[type="submit"]:active{
     box-shadow: inset 3px 4px 6px 1px #00000040;
 }
 
+.error{
+    margin-top: 5px;
+    font-size: var(--secondary-body);
+    color: var(--scarlet);
+}
+
+#display-data{
+    display: none;
+    margin-top: 10px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 5px;
+}
+
+#display-data p{
+    margin: 5px;
+    font-size: inherit;
+    color: inherit;
+}
+
 /***************
 * MEDIA QUERIES
 ***************/
@@ -103,7 +126,7 @@ button[type="submit"]:active{
         width: 600px;
     }
 
-    article > div{
+    article > :nth-child(2){
         flex-direction: row;
     }
 
