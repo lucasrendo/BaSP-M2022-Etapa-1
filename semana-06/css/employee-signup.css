@@ -71,6 +71,15 @@ button:active{
 }
 
 /***************
+* CLASSES
+***************/
+.error{
+    margin-top: 5px;
+    font-size: var(--secondary-body);
+    color: var(--scarlet);
+}
+
+/***************
 * MEDIA QUERIES
 ***************/
 
