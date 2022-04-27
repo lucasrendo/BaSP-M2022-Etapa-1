@@ -56,33 +56,28 @@ function resetPassword(){
 function displayData(e){
     e.preventDefault();
     var dataContainer = document.getElementById('display-data');
+    dataContainer.style.display = 'block'
     if(!emailRegex.test(user.value) && user.value !== ""){
-        dataContainer.style.display = 'block'
         dataContainer.firstElementChild.innerHTML = user.value + ' is an invalid Email';
         dataContainer.firstElementChild.style.color = 'var(--scarlet)'
     }
     else if(user.value === ""){
-        dataContainer.style.display = 'block'
         dataContainer.firstElementChild.innerHTML ='Email is required';
         dataContainer.firstElementChild.style.color = 'var(--scarlet)'
     }
     else{
-        dataContainer.style.display = 'block'
         dataContainer.firstElementChild.style.color = 'var(--grayish-navy)'
         dataContainer.firstElementChild.innerHTML = 'Email: ' + user.value;
     }
     if(!alphanumericValidation(password.value) && password.value !== ""){
-        dataContainer.style.display = 'block'
         dataContainer.lastElementChild.innerHTML = password.value + ' is an invalid Password';
         dataContainer.lastElementChild.style.color = 'var(--scarlet)'
     }
     else if(password.value === ""){
-        dataContainer.style.display = 'block'
         dataContainer.lastElementChild.innerHTML ='Password is required';
         dataContainer.lastElementChild.style.color = 'var(--scarlet)'
     }
     else{
-        dataContainer.style.display = 'block'
         dataContainer.lastElementChild.style.color = 'var(--grayish-navy)'
         dataContainer.lastElementChild.innerHTML = 'Password: ' + password.value;
     }

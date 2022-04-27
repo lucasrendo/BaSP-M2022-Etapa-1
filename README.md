@@ -20,5 +20,8 @@ Styling of the landing page starting with CSS from 0 to make it responsive acros
 ### Week 5
 JS fundamentals: this week's folder was filled with excercises to learn and practice the logic and syntax of JavaScript. Also the errors found in week's 4 CSS got fixed
 
+### Week 6
+Sign-up and Login pages created and connected with the landing page. JS code and DOM event Were added to validate fields of the form
+
 ---
 _By Lucas Rendo_ (editado) 

@@ -73,6 +73,20 @@ button:active{
 /***************
 * CLASSES
 ***************/
+#display-data{
+    display: none;
+    margin-top: 10px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 5px;
+}
+
+#display-data span{
+    margin: 2%;
+    width: 100%;
+    font-size: inherit;
+    /* color: inherit; */
+}
+
 .error{
     margin-top: 5px;
     font-size: var(--secondary-body);
@@ -94,6 +108,10 @@ button:active{
 
     button{
         margin-top: 12px; /*gap blocks justify-content so i position with margin to the bottom*/
+    }
+
+    #display-data span{
+        width: 45%;
     }
 }
 
