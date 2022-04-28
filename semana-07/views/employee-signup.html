@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--STYLES-->
+        <link rel="stylesheet" href="./../css/reset.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+        <link rel="stylesheet" href="./../css/styles.css">
+        <link rel="stylesheet" href="./../css/header.css">
+        <link rel="stylesheet" href="./../css/footer.css">
+        <link rel="stylesheet" href="./../css/employee-signup.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <header>
+            <a href="./index.html">
+                <img src="./../assets/icons/trackgenix-logo.png" alt="company's logo" class="rr-logo">
+            </a>
+            <a href="./index.html">
+                <h1 class="title">Trackgenix SA</h1>
+            </a>
+            <i class='bx bx-menu'></i>
+        </header>
+        <article>
+            <h2>Sign up</h2>
+            <form action="" method="post" id="signup-form">
+                <div>
+                    <label>
+                        <p>Name</p>
+                        <input type="text" id="name">
+                    </label>
+                    <label>
+                        <p>Last Name</p>
+                        <input type="text" id="last-name">
+                    </label>
+                    <label>
+                        <p>National ID</p>
+                        <input type="number" id="id">
+                    </label>
+                    <label>
+                        <p>Birth</p>
+                        <input type="date" id="birth">
+                    </label>
+                    <label>
+                        <p>Phone Number</p>
+                        <input type="number" id="phone">
+                    </label>
+                    <label>
+                        <p>Address</p>
+                        <input type="text" id="address">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <p>Region</p>
+                        <input type="text" id="region">
+                    </label>
+                    <label>
+                        <p>ZIP Code</p>
+                        <input type="number" id="zip">
+                    </label>
+                    <label>
+                        <p>Email</p>
+                        <input type="email" id="email">
+                    </label>
+                    <label>
+                        <p>Password</p>
+                        <input type="password" id="password">
+                    </label>
+                    <label>
+                        <p>Repeat Password</p>
+                        <input type="password" id="repeat-pass">
+                    </label>
+                    <button id="submit">Continue</button>
+                </div>
+            </form>
+            <div id="display-data"></div>
+        </article>
+        <footer>
+            <address>
+                <a href="https://www.linkedin.com">
+                    <img src="./../assets/icons/linkedin-logo.png" alt="linkedin logo" class="sm-link"></a>
+                <a href="https://www.twitter.com">
+                    <img src="./../assets/icons/twitter-logo.png" alt="twitter logo" class="sm-link"></a>
+                <a href="https://www.facebook.com">
+                    <img src="./../assets/icons/fb-logo.png" alt="facebook logo" class="sm-link"></a>
+                <a href="https://www.instagram.com">
+                    <img src="./../assets/icons/instagram-logo.png" alt=" instagram logo" class="sm-link"></a>
+                <a href="https://www.github.com">
+                    <img src="./../assets/icons/github-logo.png" alt="github logo" class="sm-link"></a>
+            </address>
+            <div>
+                <p>Rosario, Argentina</p>
+                <p>Copyright <i class='bx bx-copyright'></i> 2022 Radium Rocket. All rights reserved</p>
+            </div>
+        </footer>
+        <script src="./../js/employee-signup.js"></script>
+    </body>
+</html>

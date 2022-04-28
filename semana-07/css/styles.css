@@ -1,0 +1,175 @@
+/* CORRECCIONES
+    - clase link-btn:active cambia animacion de clickeo
+    
+ - Revisar aparicion de elementos y clases
+*/
+
+/*Variables*/
+:root{
+    /*COLOR PALETTE*/
+    --grayish-navy: #373867;
+    --light-grayish-green: #AACE9B;
+    --grayish-navy-40: #37386766;
+    --grayish-navy-10: #3738671a;
+    --light-grayish-green-10: #3738671a;
+    --scarlet: #F33413;
+    --bright-green: #49A37B;
+
+    /*TYPOGRAPHY*/
+    --headline: 32px;
+    --headline-weight: 700;
+    --title: 26px;
+    --title-weight: 700;
+    --subheader: 20px;
+    --component-title: 14px;
+    --component-title-weight: 700;
+    --component-body: 14px;
+    --secondary-body: 12px;
+    --button: 15px;
+    --button-weight: 500;
+}
+
+body{
+    position: relative;
+    height: max-content;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grayish-navy);
+    scroll-behavior: smooth;
+}
+
+img{height: fit-content;}
+
+a{
+    cursor: pointer;
+}
+
+/*form styles*/   
+input, textarea, select, button{
+    padding: 10px 12px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 4px;
+    font-size: var(--component-body);
+    font-family: inherit;
+    color: inherit;
+}
+
+label p{
+    margin-bottom: 7px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-weight);
+}
+
+select{
+    background-color: white;
+    color: rgba(55,56,103,0.5);
+    cursor: pointer;
+}
+
+legend{
+    margin-bottom: 9px;
+    font-size: var(--component-title);
+    font-weight: var(--component-title-weight);
+}
+
+fieldset label{
+    cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    margin: 0 8px 0 0;
+    padding: 0px;
+    width: auto;
+}
+
+form button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--light-grayish-green);
+    font-size: var(--button);
+    font-weight: var(--button-weight);
+    box-shadow: 0px 4px 4px #00000040;
+    cursor: pointer;
+}
+
+form button:target{
+    outline: 3px solid var(--grayish-navy);
+}
+
+form button:active{
+    transform: scale(0.935);
+    box-shadow: inset 3px 4px 6px 1px #00000040;
+}
+
+/*los estilos del form pertenece al main pero va aca porque son estilos globales*/
+
+/*=== CLASSES ===*/
+
+.flex-container{
+    display: flex;
+}
+
+.link-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--grayish-navy);
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: var(--button);
+    font-weight: var(--button-weight);
+    box-shadow: 0px 4px 4px #00000040;
+    cursor: pointer;
+}
+
+.link-btn:hover{
+    background-color: var(--grayish-navy);
+    color: white;
+}
+
+.link-btn:target{
+    border: 3px solid var(--grayish-navy);
+}
+
+.link-btn:active{
+    background-color: var(--light-grayish-green);
+    color: white;
+}
+
+.section-title{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+    font-size: var(--title);
+    font-weight: var(--title-weight);
+    line-height: 1.618em;
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 3px;
+    width: 110%;
+    max-width: 90vw; /*Avoids being longer than viewport when text jump line*/
+    background-color: var(--light-grayish-green);
+}
+
+/*=== MEDIA QUERIES ===*/
+
+@media (min-width: 768px){
+    :root{
+        --headline: 40px;
+        --title: 30px;
+    }
+
+    form button{
+        padding: 14px 36px;
+    }
+
+    .link-btn{
+        padding: 14px 30px;
+    }
+}
