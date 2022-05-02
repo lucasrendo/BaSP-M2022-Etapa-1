@@ -43,16 +43,6 @@ input{
     width: 100%;
 }
 
-input[type="number"]{
-    appearance: textfield;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 button{
     align-self: center;
     padding: 14px 36px;
@@ -68,6 +58,19 @@ button{
 button:active{
     transform: scale(0.935);
     box-shadow: inset 3px 4px 6px 1px #00000040;
+}
+
+article > p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+p > a{
+    text-decoration: underline;
+}
+
+p > a:hover{
+    color: var(--bright-green);
 }
 
 /***************

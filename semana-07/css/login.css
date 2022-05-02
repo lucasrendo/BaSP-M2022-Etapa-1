@@ -36,9 +36,17 @@ form{
     margin-bottom: 22px;
 }
 
-/* label{
-    position: relative;
-} */
+article > p{
+    margin-top: 15px;
+}
+
+p > a{
+    text-decoration: underline;
+}
+
+p > a:hover{
+    color: var(--bright-green);
+}
 
 label p{
     margin-bottom: 7px;
@@ -108,7 +116,6 @@ button[type="submit"]:active{
 #display-data p{
     margin: 5px;
     font-size: inherit;
-    color: inherit;
 }
 
 /***************
