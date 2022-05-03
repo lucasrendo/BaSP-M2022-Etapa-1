@@ -9,7 +9,6 @@ var numbers= ['0','1','2','3','4','5','6','7','8','9'];
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 var loginRequest = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
-var response;
 
 /***********************
  * MODULAR FUNCTIONS
@@ -153,31 +152,28 @@ function validatePassword(){
     return status
 }
 
-function displayData(){
+function displayData(e){
+    e.preventDefault()
     dataContainer.innerHTML = ''
     dataContainer.style.display = 'block';
     createElement(user, validateUser());
     createElement(password, validatePassword());
 
     if(emailRegex.test(user.value) && alphanumericValidation(password.value)){
+        var response = fetch(`${loginRequest}?email=${user.value}&password=${password.value}`)
         fetch(`${loginRequest}?email=${user.value}&password=${password.value}`)
-            .then(response => {
-                if(!response.ok){
-                    if(user.value != 'rose@radiumrocket.com'){
-                    alert(`Error ${response.status}: wrong email`);
-                    }
-                    else if(password.value != 'BaSP2022'){
-                    alert(`Error ${response.status}: wrong password`);
-                    }
-            // codigo para no sobreescribir localStorage
+        .then(response => response.json())
+        .then(json =>{
+            console.log(json)
+            if(!json.success){
+                alert(`Error: ${json.msg}`);
             }
             else{
-            alert(`Succesful Login!\n${response.status}: ${response.statusText}`);
+            alert(`Welcome back!\n${json.msg}`);
+            localData();
             }
-            return response.json()
         })
-
-    //  .then(/*guardar en localStorage*/)
+        .then(() => document.getElementById('login-form').reset())
         .catch(error => console.error('There has been a problem: ', error))
     }
 }
@@ -195,3 +191,19 @@ password.addEventListener('focus', () =>{
     resetField(password)}
 );
 submitBtn.addEventListener('click', displayData);
+
+/**************
+ * DATA STORAGE
+ *************/
+
+ function localData(){
+    localStorage.setItem('username', user.value);
+    localStorage.setItem('password', password.value);
+}
+
+function loadData(){
+    user.value = localStorage.getItem('username');
+    password.value = localStorage.getItem('password');
+}
+
+window.onload = () => loadData()

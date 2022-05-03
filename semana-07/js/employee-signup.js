@@ -7,7 +7,6 @@ and include also letters and characters*/
 // fix submit button, they duplicate and never get erased (old ones)
 
 //VARIABLES
-var form = document.getElementById('signup-form');
 var firstName = document.getElementById('name');
 var lastName = document.getElementById('last-name');
 var id = document.getElementById('id');
@@ -289,29 +288,31 @@ function displayData(e){
     createElement(email, validateEmail());
     createElement(password, validateInput(password, alphanumericValidation, 8));
     if(
-    validateInput(firstName, textOnlyValidation, 4) === 1 &&
-    validateInput(lastName, textOnlyValidation, 4) === 1 &&
-    validateInput(id, numberOnlyValidation, 8) === 1 &&
-    validateBirth() === 1 &&
-    validateInput(phone, numberOnlyValidation, 10, 10) === 1 &&
-    validateAddress() === 1 &&
-    validateInput(region, unsopportedCharacterValidation, 4) === 1 &&
-    validateInput(zip, numberOnlyValidation, 4, 5) === 1 &&
-    validateEmail() === 1 &&
-    validateInput(password, alphanumericValidation, 8) === 1
+    validateInput(firstName, textOnlyValidation, 4) === 1
+    && validateInput(lastName, textOnlyValidation, 4) === 1
+    && validateInput(id, numberOnlyValidation, 8) === 1
+    && validateBirth() === 1
+    && validateInput(phone, numberOnlyValidation, 10, 10) === 1
+    && validateAddress() === 1
+    && validateInput(region, unsopportedCharacterValidation, 4) === 1
+    && validateInput(zip, numberOnlyValidation, 4, 5) === 1
+    && validateEmail() === 1
+    && validateInput(password, alphanumericValidation, 8) === 1
     ){
         fetch(`${signUpRequest}?name=${firstName.value}&lastName=${lastName.value}&dni=${id.value}&dob=${queryParamBirth}&phone=${phone.value}&address=${address.value}&city=${region.value}&zip=${zip.value}&email=${email.value}&password=${password.value}`)
         .then(response => {
-            if(!response.ok){
-                alert(`Error ${response.status}: ${response.statusText}`);
-            }
-            //codigo para no sobreescribir localStorage
-            else{
-            alert(`Succesful Sign Up!\n${response.status}: ${response.statusText}`);
-            }
             return response.json()
         })
-        //.then(/*guardar en localStorage*/)
+        .then(json => {
+            if(!json.success){
+                alert(`Error: ${json.msg}`);
+            }
+            else{
+                alert(`Successful Sign Up!\n${json.msg}`);
+                localData();
+            }
+        })
+        .then(() => document.getElementById('signup-form').reset())
         .catch(error => console.error('There has been a problem: ', error))
     }
 }
@@ -378,3 +379,22 @@ repeatPass.addEventListener('focus', () =>{
     resetField(repeatPass)}
 );
 submitBtn.addEventListener('click', displayData);
+
+/**************
+ * DATA STORAGE
+ *************/
+
+function localData(){
+    for(var i = 0; i < (inputsArray.length-1); i++){
+        localStorage.setItem(inputsArray[i].id, inputsArray[i].value);
+    }
+}
+
+function loadData(){
+    for(var i = 0; i < (inputsArray.length-1); i++){
+        inputsArray[i].value = localStorage.getItem(inputsArray[i].id);
+    }
+    repeatPass.value = password.value;
+}
+
+window.onload = () => loadData();
