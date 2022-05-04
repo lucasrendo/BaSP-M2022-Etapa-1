@@ -58,9 +58,9 @@ function textOnlyValidation(str){
 }
 
 function alphanumericValidation(text){
-    text = text.toString()
+    text = text.toString();
     if(!textOnlyValidation(text) && !numberOnlyValidation(text) && unsopportedCharacterValidation(text)){
-        return true;
+        return true
     }
     return false
 };
@@ -79,7 +79,7 @@ function styleError(field){
     var inputTitle = field.previousElementSibling.innerHTML;
     field.nextElementSibling.innerHTML = 'invalid ' + inputTitle;
     field.style.border = '2px solid var(--scarlet)';
-    field.nextElementSibling.style.display = 'block'
+    field.nextElementSibling.style.display = 'block';
 }
 
 function createElement(field, resolution){
@@ -89,18 +89,18 @@ function createElement(field, resolution){
         case -1:
             element.innerHTML = 'invalid ' + inputTitle;
             element.className = 'error';
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
         case 0:
             element.innerHTML = inputTitle + ' required';
             element.className = 'error';
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
         case 1:
             element.innerHTML = inputTitle + ': ' + field.value;
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
     }
@@ -109,7 +109,7 @@ function createElement(field, resolution){
 function resetField(field){
     // input error message
     field.style.border = 'none';
-    field.nextElementSibling.style.display = 'none'
+    field.nextElementSibling.style.display = 'none';
     // submit results
     dataContainer.style.display = 'none';
 }
@@ -126,11 +126,11 @@ function validateUser(){
     }
     else if(emailRegex.test(user.value)){
         styleSuccess(user);
-        status = 1
+        status = 1;
     }
     else{
         styleError(user);
-        status = -1
+        status = -1;
     }
     return status
 }
@@ -153,14 +153,13 @@ function validatePassword(){
 }
 
 function displayData(e){
-    e.preventDefault()
-    dataContainer.innerHTML = ''
+    e.preventDefault();
+    dataContainer.innerHTML = '';
     dataContainer.style.display = 'block';
     createElement(user, validateUser());
     createElement(password, validatePassword());
 
     if(emailRegex.test(user.value) && alphanumericValidation(password.value)){
-        var response = fetch(`${loginRequest}?email=${user.value}&password=${password.value}`)
         fetch(`${loginRequest}?email=${user.value}&password=${password.value}`)
         .then(response => response.json())
         .then(json =>{
@@ -206,4 +205,4 @@ function loadData(){
     password.value = localStorage.getItem('password');
 }
 
-window.onload = () => loadData()
+window.onload = () => loadData();

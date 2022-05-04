@@ -23,5 +23,13 @@ JS fundamentals: this week's folder was filled with excercises to learn and prac
 ### Week 6
 Sign-up and Login pages created and connected with the landing page. JS code and DOM event Were added to validate fields of the form
 
+### week 7
+login and signup forms were connected to a server through fetch object. User input data was sent to the server through queryparams and using the server validations accesed through JSON objects the form gets processed to return one of the following errors 
+- the data is correct and the log in or sign up is successful
+- user input format is incorrect in one or more fields
+- bad request
+- For the login there's an additional validation: if the input is correct but do not match an existing user it shows another error indicating that either the password or email is incorrect
+Once the validations are completed and the format is correct the data gets stored in the browser local storage for further reutilization
+
 ---
 _By Lucas Rendo_ (editado) 

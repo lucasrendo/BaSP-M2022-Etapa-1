@@ -19,13 +19,13 @@ var zip = document.getElementById('zip');
 var email = document.getElementById('email');
 var password = document.getElementById('password');
 var repeatPass = document.getElementById('repeat-pass');
-var submitBtn = document.getElementById('submit')
+var submitBtn = document.getElementById('submit');
 var dataContainer = document.getElementById('display-data');
 var inputsArray = [firstName, lastName, id, birth, phone, address, region, zip, email, password, repeatPass];
 var numbers= ['0','1','2','3','4','5','6','7','8','9'];
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' '];
 var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-var signUpRequest = 'https://basp-m2022-api-rest-server.herokuapp.com/signup' ;
+var signUpRequest = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
 
 /***********************
  * MODULAR FUNCTIONS
@@ -75,9 +75,9 @@ function textOnlyValidation(str){
 }
 
 function alphanumericValidation(text){
-    text = text.toString()
+    text = text.toString();
     if(!textOnlyValidation(text) && !numberOnlyValidation(text) && unsopportedCharacterValidation(text)){
-        return true;
+        return true
     }
     return false
 };
@@ -98,9 +98,9 @@ function maxLengthValidation(max, inputValue){
 
 function toValidDateFormat(date){
     var dateArray = date.split('-');
-    var year = dateArray[0]
-    var month = dateArray[1]
-    var day = dateArray[2]
+    var year = dateArray[0];
+    var month = dateArray[1];
+    var day = dateArray[2];
     var newDate = month + '/' + day + '/' + year;
     return newDate
 }
@@ -119,7 +119,7 @@ function styleError(field){
     var inputTitle = field.previousElementSibling.innerHTML;
     field.nextElementSibling.innerHTML = 'invalid ' + inputTitle;
     field.style.border = '2px solid var(--scarlet)';
-    field.nextElementSibling.style.display = 'block'
+    field.nextElementSibling.style.display = 'block';
 }
 
 function createElement(field, resolution){
@@ -129,18 +129,18 @@ function createElement(field, resolution){
         case -1:
             element.innerHTML = 'invalid ' + inputTitle;
             element.className = 'error';
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
         case 0:
             element.innerHTML = inputTitle + ' required';
             element.className = 'error';
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
         case 1:
             element.innerHTML = inputTitle + ': ' + field.value;
-            element.id = inputTitle.toLowerCase() + '-result'
+            element.id = inputTitle.toLowerCase() + '-result';
             dataContainer.appendChild(element);
             break;
     }
@@ -149,7 +149,7 @@ function createElement(field, resolution){
 function resetField(field){
     // input error message
     field.style.border = 'none';
-    field.nextElementSibling.style.display = 'none'
+    field.nextElementSibling.style.display = 'none';
     // submit results
     dataContainer.style.display = 'none';
 }
@@ -195,11 +195,11 @@ function validateBirth(){
     }
     else if((currentYear - birthYear) < 100 && (currentYear - birthYear) > 17){
         styleSuccess(birth);
-        status = 1
+        status = 1;
     }
     else{
         styleError(birth);
-        status = -1
+        status = -1;
     }
     return status
 }
@@ -212,17 +212,17 @@ function validateEmail(){
     }
     else if(emailRegex.test(email.value)){
         styleSuccess(email);
-        status = 1
+        status = 1;
     }
     else{
         styleError(email);
-        status = -1
+        status = -1;
     }
     return status
 }
 
 function validateAddress(){
-    var noSpaceString = address.value
+    var noSpaceString = address.value;
     var status;
     do{
         noSpaceString = noSpaceString.replace(' ', '');
@@ -232,17 +232,17 @@ function validateAddress(){
         status = 0;
     }
     else if(
-    address.value.length >= 5 && 
-    address.value.includes(' ') &&
-    !numberOnlyValidation(noSpaceString) &&
-    !textOnlyValidation(address.value)
+    address.value.length >= 5 
+    && address.value.includes(' ')
+    && !numberOnlyValidation(noSpaceString)
+    && !textOnlyValidation(address.value)
     ){
         styleSuccess(address);
-        status = 1
+        status = 1;
     }
     else {
         styleError(address);
-        status = -1
+        status = -1;
     }
     return status
 }
@@ -253,7 +253,7 @@ function validatePassword(){
         styleNeutral(repeatPass);
         status = 0;
     }
-    if(password.value === repeatPass.value && password.value !== ""){
+    if(password.value === repeatPass.value && password.value !== ''){
         styleSuccess(repeatPass);
         status = 1;
     }
@@ -267,14 +267,14 @@ function validatePassword(){
 function displayData(e){
     e.preventDefault();
     birthArray = toValidDateFormat(birth.value);
-    var queryParamBirth = toValidDateFormat(birth.value)
+    var queryParamBirth = toValidDateFormat(birth.value);
     if(password.value !== repeatPass.value){
         password.style.border = '2px solid var(--scarlet)';
         repeatPass.style.border = '2px solid var(--scarlet)';
         return alert('Passwords do not match');
     }
     else{
-        dataContainer.innerHTML = ''
+        dataContainer.innerHTML = '';
         dataContainer.style.display = 'block';
     }
     createElement(firstName, validateInput(firstName, textOnlyValidation, 4));
@@ -315,7 +315,7 @@ function displayData(e){
         .then(() => document.getElementById('signup-form').reset())
         .catch(error => console.error('There has been a problem: ', error))
     }
-}
+};
 
 /*********
  * EVENTS
